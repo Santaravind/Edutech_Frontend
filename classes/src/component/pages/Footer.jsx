@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/withg20.png'
 const Footer = () => {
+    const [playVideo, setPlayVideo] = useState(false);
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -65,6 +66,8 @@ const Footer = () => {
                     <span>YouTube</span>
                   </a>
                 </li>
+    
+
                 <li>
                   <a 
                     href="mailto:happydigitalbharat@gmail.com"
@@ -84,29 +87,38 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Featured Video</h3>
             <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-              <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                <a 
-                  href="https://www.youtube.com/watch?v=eNWR7KC3gYI" 
-                  target="_blank" 
-                  rel="noopener"
-                  className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
-                >
-                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-3 hover:bg-red-700 transition-colors">
-                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-gray-300">Click to Watch Video</span>
-                </a>
-              </div>
+                <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+      {playVideo ? (
+        <iframe
+          className="w-full h-full rounded-lg"
+          src="https://www.youtube.com/embed/eNWR7KC3gYI?autoplay=1"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      ) : (
+        <button
+          onClick={() => setPlayVideo(true)}
+          className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
+        >
+          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-3 hover:bg-red-700 transition-colors">
+            <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+          <span className="text-sm text-gray-300">Click to Watch Video</span>
+        </button>
+      )}
+    </div>
             </div>
             
-            {/* Stats Section */}
-            <div className="mt-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4">
+           
+            {/* <div className="mt-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4">
               <h4 className="text-sm font-medium mb-2">Total Orders (Last 28 Days)</h4>
               <div className="text-2xl font-bold">24,677</div>
               <div className="text-xs text-blue-100 mt-1">Products delivered successfully</div>
-            </div>
+            </div> */}
           </div>
 
           {/* Column 3 - Company Links */}
