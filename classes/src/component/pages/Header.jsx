@@ -27,7 +27,7 @@ import {Link} from 'react-router-dom'
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-lg mx-auto">
-          <Link to="/home" className="hover:text-gray-300 text-2xl font-serif">Home</Link>
+          <Link to="/" className="hover:text-gray-300 text-2xl font-serif">Home</Link>
           <Link to="/course" className="hover:text-gray-300 text-2xl font-serif">Course</Link>
           <Link to="/about" className="hover:text-gray-300 text-2xl font-serif">About Us</Link>
         </div>
