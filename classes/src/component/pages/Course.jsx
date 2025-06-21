@@ -14,7 +14,8 @@ function Course() {
     }
 
     function handleDetails(CourseName){
-        alert(`you click on details of ${CourseName}`)
+        //alert(`you click on details of ${CourseName}`)
+        navigate("/details")
     }
   return (
     <div className="bg-gradient-to-r from-gray-500 via-purple-200 to-yellow-400 min-h-screen p-4">
