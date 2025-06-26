@@ -9,6 +9,8 @@ import Login from "./component/auth/Login"
 import Details from "./component/pages/Details"
 import Verifycation from "./component/auth/Verifycation"
 import { ToastContainer } from "react-toastify"
+import ProtectetRoute from "./component/route/ProtectetRoute"
+import Logout from "./component/auth/Logout"
 
 
 
@@ -22,12 +24,26 @@ function App() {
     
     <Route path="/course" element={<Course/>}/>
     <Route path="/about" element={<AboutUs/>}/>
-    <Route path="/details" element={<Details/>}/>
+    <Route path="/details" element={
+      <ProtectetRoute>
+    <Details/>
+      
+      </ProtectetRoute>
+      
+      }/>
      <Route path="/signin" element={<Signin/>}/>
      
      <Route path="/verify" element={<Verifycation/>}/>
 
      <Route path="/login" element={<Login/>}/>
+
+      <Route path="/logout" element={
+      <ProtectetRoute>
+    <Logout/>
+      
+      </ProtectetRoute>
+      
+      }/>
 
    </Routes>
     <Footer/>

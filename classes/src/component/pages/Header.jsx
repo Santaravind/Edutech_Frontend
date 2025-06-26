@@ -36,6 +36,7 @@ import {Link} from 'react-router-dom'
         <div className="hidden md:flex space-x-4 text-sm md:text-base">
           <Link to="/signin" className="hover:text-gray-300 text-2xl font-serif">Sign In</Link>
           <Link to="/login" className="hover:text-gray-300 text-2xl font-serif">Login</Link>
+          <Link to="/logout" className="hover:text-gray-300 text-2xl font-serif">Logout</Link>
         </div>
       </nav>
 
@@ -47,6 +48,7 @@ import {Link} from 'react-router-dom'
           <Link to="/about" className="block text-xl font-serif hover:text-gray-300">About Us</Link>
           <Link to="/signin" className="block text-xl font-serif hover:text-gray-300 border-2 rounded-xl justify-center text-center p-0.5  hover:bg-black">Sign In</Link>
           <Link to="/login" className="block text-xl font-serif hover:text-gray-300 bg-blue-700 border-2 border-blue-400 rounded-xl text-center  justify-center m-1 p-0.5 hover:bg-blue-900">Login</Link>
+          <Link to="/logout" className="block text-xl font-serif hover:text-gray-300 bg-blue-700 border-2 border-blue-400 rounded-xl text-center  justify-center m-1 p-0.5 hover:bg-blue-900">Logout</Link>
         </div>
       )}
     </header>

@@ -55,8 +55,8 @@ const Login = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg m-12">
-      <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Welcome Back</h2>
+    <div className="max-w-md mx-auto  bg-gradient-to-r from-gray-400 via-yellow-400 to-black bg-white p-8 rounded-xl shadow-lg m-12">
+      <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Please Login </h2>
 
       <div className="space-y-4">
         {/* Email */}
