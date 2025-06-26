@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Home() {
-  const courses = [
+ const courses = [
     { id: 1, name: 'CCC', description: 'Course on Computer Concepts' },
     { id: 2, name: 'ADCA', description: 'Advanced Diploma in Computer Applications' },
     { id: 3, name: 'BCA', description: 'Bachelor of Computer Applications' },
@@ -13,7 +13,7 @@ function Home() {
   ]
 
   return (
-    <div className='min-h-screen bg-gradient-to-r from-gray-500 via-purple-200 to-yellow-400 py-8'>
+    <div className='min-h-screen bg-gradient-to-r from-gray-500 via-purple-200 to-yellow-300 py-8'>
       <div className='container mx-auto px-4'>
         <h2 className='text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-8 text-gray-800'>
           Our Courses
