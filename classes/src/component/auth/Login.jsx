@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Mail, Lock, Eye, EyeOff, CheckCircle, AlertCircle } from 'lucide-react'; // Assuming you use lucide icons
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
+
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState({ type: '', text: '' });
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,30 +22,32 @@ const Login = () => {
 
   const handleSubmit = async () => {
     setLoading(true);
-    setMessage({ type: '', text: '' });
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', formData);
-
+      console.log(formData);
+    const response= await axios.post(`${apiUrl}/auth/login`, formData);
+      // Store token and user data
       localStorage.setItem('authToken', response.data.token);
-      localStorage.setItem('userData', JSON.stringify(response.data.user));
+      //localStorage.setItem('userData', JSON.stringify(response.data.user));
 
-      setMessage({ type: 'success', text: response.data.message });
+      toast.success('Login successful');
 
+      // Redirect to dashboard or home page
       setTimeout(() => {
-        if (typeof onSuccess === 'function') {
-          onSuccess(response.data.user);
-        }
-      }, 1000);
+        navigate('/'); // Change to your target route
+      }, 1500);
     } catch (error) {
       const resData = error.response?.data;
-      setMessage({
-        type: 'error',
-        text: resData?.error || 'Network error. Please try again.'
-      });
 
-      if (resData?.needsVerification && typeof onSwitchToVerify === 'function') {
-        setTimeout(() => onSwitchToVerify(formData.email), 2000);
+      // Show error toast
+      toast.error(resData?.error || 'Network error. Please try again.');
+
+      // If backend tells to verify email
+      if (resData?.needsVerification) {
+        toast.info('Please verify your email first.');
+        setTimeout(() => {
+          navigate('/verify', { state: { email: formData.email } });
+        }, 1500);
       }
     }
 
@@ -52,19 +58,8 @@ const Login = () => {
     <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg m-12">
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Welcome Back</h2>
 
-      {message.text && (
-        <div className={`flex items-center gap-2 p-4 rounded-lg mb-6 ${
-          message.type === 'success'
-            ? 'bg-green-50 text-green-700 border border-green-200'
-            : 'bg-red-50 text-red-700 border border-red-200'
-        }`}>
-          {message.type === 'success' ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
-          <span>{message.text}</span>
-        </div>
-      )}
-
       <div className="space-y-4">
-        {/* Email Input */}
+        {/* Email */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
           <div className="relative">
@@ -81,7 +76,7 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Password Input */}
+        {/* Password */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
           <div className="relative">
@@ -106,7 +101,7 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Submit Button */}
+      {/* Login Button */}
       <button
         onClick={handleSubmit}
         disabled={loading}

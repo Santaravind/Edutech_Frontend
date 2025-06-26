@@ -1,9 +1,74 @@
-import React, { useState, useEffect } from 'react';
-import { User, Mail, Lock, Eye, EyeOff, CheckCircle, AlertCircle, Loader, Phone, Calendar } from 'lucide-react';
-import axios from 'axios'
+// import React, { useState, useEffect } from 'react';
+// import { User, Mail, Lock, Eye, EyeOff, CheckCircle, AlertCircle, Loader, Phone, Calendar } from 'lucide-react';
+// import axios from 'axios'
 
-// Signup Component
-const Signin=()=>  {
+// // Signup Component
+// const Signin=()=>  {
+
+//   const [formData, setFormData] = useState({
+//     firstName: '',
+//     middleName: '',
+//     lastName: '',
+//     fatherName: '',
+//     age: '',
+//     mobileNo: '',
+//     email: '',
+//     password: ''
+//   });
+//   const [showPassword, setShowPassword] = useState(false);
+//   const [loading, setLoading] = useState(false);
+//   const [message, setMessage] = useState({ type: '', text: '' });
+
+//  //API 
+//  const apiUrl=import.meta.env.VITE_API_URL;
+
+//    console.log("API URL :",apiUrl);
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({ ...prev, [name]: value }));
+//   };
+
+//   const handleSubmit = async () => {
+//   setLoading(true);
+//   setMessage({ type: '', text: '' });
+
+//   try {
+//     const response = await axios.post(`${apiUrl}/auth/signup`, {
+//       ...formData,
+//       age: parseInt(formData.age),
+//       mobileNo: parseInt(formData.mobileNo)
+//     });
+
+//     setMessage({ type: 'success', text: response.data.message });
+
+//     // Optional: redirect or callback
+//     setTimeout(() => {
+//       if (typeof onSuccess === 'function') {
+//         onSuccess(formData.email);
+//       }
+//     }, 2000);
+
+//   } catch (error) {
+//     if (error.response && error.response.data) {
+//       setMessage({ type: 'error', text: error.response.data.error });
+//     } else {
+//       setMessage({ type: 'error', text: 'Network error. Please try again.' });
+//     }
+//   }
+
+//   setLoading(false);
+// };
+import React, { useState } from 'react';
+import {
+  User, Mail, Lock, Eye, EyeOff, CheckCircle, AlertCircle, Loader, Phone, Calendar
+} from 'lucide-react';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { Form, useNavigate } from 'react-router-dom';
+
+const Signin = () => {
+  const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -15,61 +80,64 @@ const Signin=()=>  {
     email: '',
     password: ''
   });
+
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState({ type: '', text: '' });
+   
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async () => {
-  setLoading(true);
-  setMessage({ type: '', text: '' });
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+     console.log(formData);
+   try{
+    const response = await axios.post(
+      `${apiUrl}/auth/signup`,
+      formData
+    );
+        
+      toast.success('Signup is complete');
+      toast.info('Email verification code sent to your email ID');
 
-  try {
-    const response = await axios.post('http://localhost:5000/api/signup', {
-      ...formData,
-      age: parseInt(formData.age),
-      mobileNo: parseInt(formData.mobileNo)
-    });
+      // Navigate after short delay
+      setTimeout(() => {
+        navigate('/verify', { state: { email: formData.email } });
+      }, 2000);
 
-    setMessage({ type: 'success', text: response.data.message });
+    }catch (error) {
+  if (error.response?.data?.error) {
+    // Show backend error directly
+    toast.error(error.response.data.error);
 
-    // Optional: redirect or callback
-    setTimeout(() => {
-      if (typeof onSuccess === 'function') {
-        onSuccess(formData.email);
-      }
-    }, 2000);
-
-  } catch (error) {
-    if (error.response && error.response.data) {
-      setMessage({ type: 'error', text: error.response.data.error });
-    } else {
-      setMessage({ type: 'error', text: 'Network error. Please try again.' });
+    // If it's a duplicate email error, navigate to login after a delay
+    if (
+      error.response.data.error.toLowerCase().includes('email') &&
+      error.response.data.error.toLowerCase().includes('exists')
+    ) {
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
     }
+  } else {
+    toast.error('Network error. Please try again.');
   }
-
-  setLoading(false);
-};
+}
+  };
 
 
   return (
-    <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <div className="max-w-2xl mx-auto
+    bg-gradient-to-r from-gray-400 via-yellow-400 to-black
+    bg-white p-8 rounded-xl shadow-lg m-3">
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Create Account</h2>
       
-      {message.text && (
-        <div className={`flex items-center gap-2 p-4 rounded-lg mb-6 ${
-          message.type === 'success' ? 'bg-green-50 text-green-700 border border-green-200' : 
-          'bg-red-50 text-red-700 border border-red-200'
-        }`}>
-          {message.type === 'success' ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
-          <span>{message.text}</span>
-        </div>
-      )}
-
+      <form onSubmit={handleSubmit}
+      >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* First Name */}
         <div>
@@ -216,16 +284,15 @@ const Signin=()=>  {
           </div>
         </div>
       </div>
-
-      <button
-        onClick={handleSubmit}
+ <button
+        type='submit'
         disabled={loading}
-        className="w-full mt-8 bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+        className="w-full mt-8 bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
       >
-        {loading ? <Loader className="animate-spin" size={20} /> : null}
+        {loading && <Loader className="animate-spin" size={20} />}
         {loading ? 'Creating Account...' : 'Sign Up'}
       </button>
-
+</form> 
       <div className="mt-6 text-center">
         <button
          
