@@ -11,13 +11,34 @@ import Verifycation from "./component/auth/Verifycation"
 import { ToastContainer } from "react-toastify"
 import ProtectetRoute from "./component/route/ProtectetRoute"
 import Logout from "./component/auth/Logout"
+import TakeClass from "./component/pages/TakeClass"
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 function App() {
  return (
    <>
-    <ToastContainer position="top-right" autoClose={3000} />
+    <ToastContainer
+     position="top-center" 
+     autoClose={3000} 
+        toastOptions={{
+    style: {
+      background: '#673AB7', // purple
+      color: '#fff',
+    },
+    success: {
+      style: {
+        background: '#4CAF50',
+      },
+    },
+    error: {
+      style: {
+        background: '#f44336',
+      },
+    },
+  }}
+     />
      <Header/>
    <Routes>
     <Route path="/" element={<Home/>}/>
@@ -28,6 +49,12 @@ function App() {
       <ProtectetRoute>
     <Details/>
       
+      </ProtectetRoute>
+      
+      }/>
+    <Route path="/class" element={
+      <ProtectetRoute>
+    <TakeClass/>      
       </ProtectetRoute>
       
       }/>

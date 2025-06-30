@@ -29,6 +29,7 @@ import {Link} from 'react-router-dom'
         <div className="hidden md:flex space-x-8 text-lg mx-auto">
           <Link to="/" className="hover:text-gray-300 text-2xl font-serif">Home</Link>
           <Link to="/course" className="hover:text-gray-300 text-2xl font-serif">Course</Link>
+          <Link to="/class" className="hover:text-gray-300 text-2xl font-serif">Class</Link>
           <Link to="/about" className="hover:text-gray-300 text-2xl font-serif">About Us</Link>
         </div>
 
@@ -43,7 +44,7 @@ import {Link} from 'react-router-dom'
       {/* Mobile Menu (dropdown below nav) */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2">
-          <Link to="/home" className="block text-xl font-serif hover:text-gray-300">Home</Link>
+          <Link to="/" className="block text-xl font-serif hover:text-gray-300">Home</Link>
           <Link to="/course" className="block text-xl font-serif hover:text-gray-300">Course</Link>
           <Link to="/about" className="block text-xl font-serif hover:text-gray-300">About Us</Link>
           <Link to="/signin" className="block text-xl font-serif hover:text-gray-300 border-2 rounded-xl justify-center text-center p-0.5  hover:bg-black">Sign In</Link>

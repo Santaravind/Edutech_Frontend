@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom'
 function Logout() {
     const navigate=useNavigate();
 useEffect(()=>{
-    localStorage.removeItem("token")
+    localStorage.removeItem("authToken")
     navigate("/home");
 },[])
     
   return (
-    <div>
-      Logout is Success !!!
-    </div>
+   <>
+   
+   </>
   )
 }
 export default Logout
