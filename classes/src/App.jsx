@@ -13,6 +13,7 @@ import ProtectetRoute from "./component/route/ProtectetRoute"
 import Logout from "./component/auth/Logout"
 import TakeClass from "./component/pages/TakeClass"
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from "./component/route/ScrollToTop"
 
 
 
@@ -40,6 +41,7 @@ function App() {
   }}
      />
      <Header/>
+     <ScrollToTop/>
    <Routes>
     <Route path="/" element={<Home/>}/>
     

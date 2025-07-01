@@ -24,7 +24,16 @@ const [currentIndex, setCurrentIndex] = useState(0);
  const handleBook = (e) => {
   e.preventDefault(); 
   window.open("https://www.happydigitalbharat.com/", "_blank");
-};
+     };
+
+     const handleCourse=(e)=>{
+      e.preventDefault();
+      navigate("/course");
+      window.scrollTo(0, 0);
+
+     }
+
+
 
   return (
     <>
@@ -66,7 +75,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
               <button className="bg-yellow-400 text-gray-900 px-5 py-2 rounded-lg font-medium hover:bg-yellow-500 transition">
                 Join Free Class
               </button>
-              <button className="bg-white text-indigo-600 px-5 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
+              <button className="bg-white text-indigo-600 px-5 py-2 rounded-lg font-medium hover:bg-gray-100 transition" onClick={handleCourse}>
                 View Courses
               </button>
             </div>
@@ -80,7 +89,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
       </section>
 
      {/* {slider section} */}
-     <div className="w-full h-20 flex items-center justify-center bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 text-white text-lg font-medium m-1 rounded-lg">
+     <div className="w-full h-20 flex items-center justify-center bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 text-white text-lg font-medium m-1 rounded-lg mr-1">
       <div className="flex items-center gap-3 transition-opacity duration-700 ease-in-out">
         <span className="text-xl">{texts[currentIndex].icon}</span>
         <span>{texts[currentIndex].text}</span>
@@ -88,8 +97,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
     </div>
 
       {/* Why Choose Section */}
-     <section className="py-12 px-4 md:px-16 text-center bg-gray-900 text-white">
-  <h2 className="text-2xl font-bold mb-8">Why Choose Our Live Classes?</h2>
+     <section className="py-12 px-4 md:px-16 text-center bg-gray-900 text-white mt-0.5 mb-0.5">
+  <h2 className="text-2xl font-bold mb-8 ">Why Choose Our Live Classes?</h2>
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
     <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white text-3xl">
       <div className="text-yellow-400 text-6xl mb-2">🧠</div>
@@ -103,9 +112,9 @@ const [currentIndex, setCurrentIndex] = useState(0);
       <div className="text-blue-600 text-6xl mb-2">🎥</div>
       <p className="font-medium">Class Recordings Available</p>
     </div>
-    <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white text-3xl" >
+    <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white text-3xl " >
       <div className="text-blue-600 text-6xl mb-2">📚 </div>
-       <p className="font-medium mt-6">
+       <p className="font-medium mt-6 hover:bg-white rounded-xl p-1 hover:text-blue-800">
     <button onClick={handleBook}>Buy Books</button>
   </p>
     </div>
@@ -115,7 +124,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
       {/* our courses */}
 
-<section className="bg-gray-900 py-5 px-3 md:px-16">
+<section className="bg-gray-900 py-5 px-3 md:px-16 mt-0.5 mb-0.5">
   <h1 className="text-4xl font-sans font-bold text-center mb-7 text-white ">Our Courses</h1>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
@@ -276,18 +285,25 @@ const [currentIndex, setCurrentIndex] = useState(0);
           </button>
         </div>
       </div>
+       
     </div>
+     <div className='justify-center items-center'>
+        <h1 className='text-blue-700 font-sans text-3xl  text-center   justify-center items-center font-semibold '> <button className='border-2 p-2 rounded-xl text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium  border-teal-100 hover:bg-white' onClick={handleCourse}> More Courses </button>  </h1>
+     </div>
+    
   </div>
+ 
 </section>
     
     {/* Teachers */}
-    <section className="bg-gray-800 py-12 px-4 md:px-16">
-  <h2 className="text-3xl font-bold text-center mb-10 text-white">Our Teachers</h2>
+    <section className="bg-gray-800 py-12 px-4 md:px-16 mt-0.5 mb-0.5">
+  <h2 className="text-3xl font-bold text-center mb-10 text-blue-700 font-sans ">Our Teachers</h2>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
     
     {/* Admin Teacher */}
-    <div className="bg-white rounded-xl shadow-lg p-6 text-center border-2 border-blue-600">
+    <div className="bg-indigo-200 rounded-xl shadow-lg p-6 text-center border-2 border-blue-600">
       <img
         src="https://randomuser.me/api/portraits/men/32.jpg"
         alt="Admin Teacher"
@@ -336,8 +352,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
 
       {/* About Section */}
-      <section className="py-12 px-4 md:px-16 text-center bg-gray-800">
-        <h2 className="text-2xl font-bold mb-8 text-white">About </h2>
+      <section className="py-12 px-4 md:px-16 text-center bg-gray-800 mt-0.5 mb-0.5">
+        <h2 className="text-2xl font-bold mb-8 text-blue-700 font-sans ">About </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {[
             {
