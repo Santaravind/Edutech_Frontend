@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { FaChalkboardTeacher, FaPenFancy, FaCertificate, FaQuestionCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom'
+import ceo from '../assets/ceo.jpg'
+import diologY from '../assets/Biologi.jpg'
+import rites from '../assets/ritesh.jpg'
+import sant from '../assets/Sant.png'
+import css from '../assets/Course1.png'
+import html from '../assets/Course2.png'
+import chs from '../assets/CHS.png'
+// import ceo from '../assets/Indresh_Singh.jpg'
 
 function Home() {
   const navigate=useNavigate();
@@ -122,7 +130,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 </section>
 
 
-      {/* our courses */}
+      {/* Our Courses */}
 
 <section className="bg-gray-900 py-5 px-3 md:px-16 mt-0.5 mb-0.5">
   <h1 className="text-4xl font-sans font-bold text-center mb-7 text-white ">Our Courses</h1>
@@ -132,7 +140,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
-        src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
+        // src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
+        src={css}
         alt="CSS Course"
         className="w-full h-48 object-cover"
       />
@@ -171,7 +180,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
      <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
-        src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
+        // src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
+        src={html}
         alt="CSS Course"
         className="w-full h-48 object-cover"
       />
@@ -179,7 +189,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
       {/* Content */}
       <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
         <div>
-          <h1 className="text-xl font-bold mb-1">CSS</h1>
+          <h1 className="text-xl font-bold mb-1">HTML</h1>
           <h3 className="text-md mb-2">Cascading Style Sheets</h3>
           <p className="text-sm mb-1">💰 Rs.3000</p>
           <p className="text-sm">📅 Start Date: 2025/July/01</p>
@@ -250,7 +260,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
      <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
-        src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
+        // src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
+        src={chs}
         alt="CSS Course"
         className="w-full h-48 object-cover"
       />
@@ -303,48 +314,50 @@ const [currentIndex, setCurrentIndex] = useState(0);
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
     
     {/* Admin Teacher */}
-    <div className="bg-indigo-200 rounded-xl shadow-lg p-6 text-center border-2 border-blue-600">
+    <div className="bg-violet-400 rounded-xl shadow-lg p-6 text-center border-2 border-violet-600">
       <img
-        src="https://randomuser.me/api/portraits/men/32.jpg"
-        alt="Admin Teacher"
+         src={ceo}
+        alt="Admin CEO"
         className="w-28 h-28 mx-auto rounded-full mb-4 object-cover"
       />
-      <h3 className="text-xl font-semibold text-blue-700">Mr. Rakesh Sharma</h3>
-      <p className="text-sm text-gray-600">M.Sc. Physics, B.Ed</p>
+      <h3 className="text-xl font-semibold text-blue-700">Mr. Indresh Kumar(Rahul)</h3>
+      <p className="text-sm text-gray-600"> Founder & CEO </p>
       <span className="mt-2 inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full">Admin Teacher</span>
     </div>
 
     {/* Teacher 1 */}
-    <div className="bg-white rounded-xl shadow-md p-6 text-center">
+    <div className="bg-white rounded-xl shadow-md p-6 text-center hover:bg-violet-400">
       <img
-        src="https://randomuser.me/api/portraits/women/44.jpg"
+        
+        src={diologY}
         alt="Teacher"
         className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
       />
-      <h3 className="text-lg font-semibold">Ms. Priya Verma</h3>
-      <p className="text-sm text-gray-600">M.A. English Literature</p>
+      <h3 className="text-lg font-semibold">Mr. </h3>
+      <p className="text-sm text-gray-600">Co Founder & Biology Teacher</p>
     </div>
 
     {/* Teacher 2 */}
-    <div className="bg-white rounded-xl shadow-md p-6 text-center">
+    <div className="bg-white rounded-xl shadow-md p-6 text-center  hover:bg-violet-400">
       <img
-        src="https://randomuser.me/api/portraits/men/47.jpg"
+     
+        src={rites}
         alt="Teacher"
         className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
       />
-      <h3 className="text-lg font-semibold">Mr. Aman Tiwari</h3>
-      <p className="text-sm text-gray-600">M.Tech Computer Science</p>
+      <h3 className="text-lg font-semibold">Mr.Ritesh Kumar</h3>
+      <p className="text-sm text-gray-600">Co Founder & Teacher</p>
     </div>
 
       {/* Teacher3 */}
-    <div className="bg-white rounded-xl shadow-md p-6 text-center">
+    <div className="bg-white rounded-xl shadow-md p-6 text-center hover:bg-red-500">
       <img
-        src="https://randomuser.me/api/portraits/men/47.jpg"
+         src={sant}
         alt="Teacher"
-        className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
+        className="w-24 h-24 mx-auto rounded-full mb-5 object-cover"
       />
-      <h3 className="text-lg font-semibold">Mr. Aman Tiwari</h3>
-      <p className="text-sm text-gray-600">M.Tech Computer Science</p>
+      <h3 className="text-lg font-semibold">Aravind Sant Singh</h3>
+      <p className="text-sm text-gray-600">Bachelor in computer Science</p>
     </div>
   </div>
 </section>
