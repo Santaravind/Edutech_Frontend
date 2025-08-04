@@ -1,11 +1,13 @@
+
 import React from 'react'
 
 function AboutUs() {
   return (
     <div>
-      this is about us page...
+      About us ...
     </div>
   )
 }
 
 export default AboutUs
+

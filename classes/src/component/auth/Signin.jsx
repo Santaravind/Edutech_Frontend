@@ -90,7 +90,7 @@ const Signin = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  
+   //Signin Handler Api
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -126,7 +126,14 @@ const Signin = () => {
   } else {
     toast.error('Network error. Please try again.');
   }
-}
+      }
+  };
+
+  const handleChangeLogin=(e)=>{
+    e.preventDefault();
+
+    navigate("/login");
+
   };
 
 
@@ -295,10 +302,10 @@ const Signin = () => {
 </form> 
       <div className="mt-6 text-center">
         <button
-         
+         onClick={handleChangeLogin}
           className="text-blue-600 hover:underline"
         >
-          Already have an account? Login
+          Already have an account?Login..  
         </button>
       </div>
     </div>

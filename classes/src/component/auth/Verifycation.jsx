@@ -42,7 +42,7 @@ function Verifycation() {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <div className="max-w-md mx-auto  bg-gradient-to-r from-gray-400 via-yellow-400 to-black bg-white p-8 rounded-xl shadow-lg">
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Verify Email</h2>
 
       <div className="text-center text-gray-600 mb-6">
