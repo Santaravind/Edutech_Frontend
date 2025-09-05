@@ -1,100 +1,190 @@
-// import React from 'react'
-// import {useNavigate} from 'react-router-dom'
-
-
-
-
-// function Course() {
-//     const courseList = ["CCC", "ADCA", "BCA", "DCA", "CCC", "ADCA", "BCA", "DCA"];
-//     const navigate=useNavigate();
-//     function handalonBuynow(CourseName){
-//      //alert(`you click buy now for ${CourseName}`)
-//     //   console.log("buy now clicked!!");
-//     navigate("/signin")
-//     }
-
-//     function handleDetails(CourseName){
-//         //alert(`you click on details of ${CourseName}`)
-//         navigate("/details")
-//     }
-//   return (
-//     <div className="bg-gradient-to-r from-gray-500 via-purple-200 to-yellow-400 min-h-screen p-4">
-//       <h2 className="text-3xl mb-4 text-center font-bold">Our Courses</h2>
-
-//       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-//         {courseList.map((course, index) => (
-//           <div
-//             key={index}
-//             className="w-full h-64 p-4 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-lg shadow-lg flex flex-col justify-between   hover:shadow-xl transition-all duration-300 hover:scale-105"
-//           >
-//             <h1 className="text-2xl font-semibold text-white">{course}</h1>
-            
-//             <div className='flex flex-col sm:flex-row gap-3'>
-//                 <button className='flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-xl transition-colors duration-200' onClick={()=>handalonBuynow(course)}>
-//                   Buy Now
-//                 </button>
-//                 <button 
-//                   onClick={()=>handleDetails(course)}
-//                 className='flex-1 bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 font-medium py-2 px-4 rounded-xl transition-all duration-200' 
-//                 >
-//                   Details
-//                 </button>
-//               </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Course;
-
 import React from 'react'
-
+import acmc from '../assets/class1.jpg'
+import { toast } from 'react-toastify';
 function Home() {
- const courses = [
-    { id: 1, name: 'CCC', description: 'Course on Computer Concepts' },
-    { id: 2, name: 'ADCA', description: 'Advanced Diploma in Computer Applications' },
-    { id: 3, name: 'BCA', description: 'Bachelor of Computer Applications' },
-    { id: 4, name: 'DCA', description: 'Diploma in Computer Applications' },
-    { id: 5, name: 'PGDCA', description: 'Post Graduate Diploma in Computer Applications' },
-    { id: 6, name: 'MCA', description: 'Master of Computer Applications' },
-    { id: 7, name: 'Web Development', description: 'Full Stack Web Development Course' },
-    { id: 8, name: 'Data Science', description: 'Complete Data Science Program' }
-  ]
-
+  function handleDetail(){
+    toast.success("Comming soon !!", {duration:2000})
+  }
   return (
-    <div className='min-h-screen bg-gradient-to-r from-gray-500 via-purple-200 to-yellow-300 py-8'>
-      <div className='container mx-auto px-4'>
+    <div className='min-h-screen bg-gradient-to-r from-gray-500 via-purple-200 to-yellow-300 p-2'>
+      <div className='container m-auto p-2'>
         <h2 className='text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-8 text-gray-800'>
           Our Courses
         </h2>
         
-        {/* Responsive Grid Layout */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-          {courses.map((course) => (
-            <div 
-              key={course.id}
-              className='bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105'
-            >
-              <h3 className='text-2xl font-bold text-white mb-2'>
-                {course.name}
-              </h3>
-              <p className='text-purple-100 text-sm mb-4 min-h-[40px]'>
-                {course.description}
-              </p>
-              
-              <div className='flex flex-col sm:flex-row gap-3'>
-                <button className='flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-xl transition-colors duration-200'>
-                  Buy Now
-                </button>
-                <button className='flex-1 bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 font-medium py-2 px-4 rounded-xl transition-all duration-200'>
-                  Details
-                </button>
-              </div>
-            </div>
-          ))}
+        
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 justify-center">
+                  {/* Responsive Grid Layout */}
+         <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+      {/* Image */}
+      <img
+       
+        src={acmc}
+        alt="CSS Course"
+        className="w-full h-58  object-cover"
+      />
+
+      {/* Content */}
+      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
+        <div>
+          <h1 className="text-xl font-bold mb-1">ACMC</h1>
+          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm flex "><h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  15/September/2025</p>
         </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3 mt-6">
+          <button
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            Buy Now
+          </button>
+
+          <button
+           onClick={handleDetail}
+            type="button"
+            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+
+   <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+      {/* Image */}
+      <img
+       
+        src={acmc}
+        alt="CSS Course"
+        className="w-full h-58  object-cover"
+      />
+
+      {/* Content */}
+      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
+        <div>
+          <h1 className="text-xl font-bold mb-1">ACMC</h1>
+          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm flex "><h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  15/September/2025</p>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3 mt-6">
+          <button
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            Buy Now
+          </button>
+
+          <button
+           onClick={handleDetail}
+            type="button"
+            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+   <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+      {/* Image */}
+      <img
+       
+        src={acmc}
+        alt="CSS Course"
+        className="w-full h-58  object-cover"
+      />
+
+      {/* Content */}
+      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
+        <div>
+          <h1 className="text-xl font-bold mb-1">ACMC</h1>
+          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm flex "><h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  15/September/2025</p>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3 mt-6">
+          <button
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            Buy Now
+          </button>
+
+          <button
+           onClick={handleDetail}
+            type="button"
+            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+   <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+      {/* Image */}
+      <img
+       
+        src={acmc}
+        alt="CSS Course"
+        className="w-full h-58  object-cover"
+      />
+
+      {/* Content */}
+      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
+        <div>
+          <h1 className="text-xl font-bold mb-1">ACMC</h1>
+          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm flex "><h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  15/September/2025</p>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3 mt-6">
+          <button
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            Buy Now
+          </button>
+
+          <button
+           onClick={handleDetail}
+            type="button"
+            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
         
         {/* Optional: Add a call-to-action section */}
         <div className='mt-12 text-center'>

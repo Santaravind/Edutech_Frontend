@@ -14,12 +14,17 @@ import Logout from "./component/auth/Logout"
 import TakeClass from "./component/pages/TakeClass"
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from "./component/route/ScrollToTop"
+import SendNotification from "./component/notifications/SendNotification"
+import Notification from "./component/notifications/Notification"
+import { Toaster } from "react-hot-toast"
+import Buy from "./component/pages/Buy"
 
 
 
 function App() {
  return (
    <>
+    <Toaster position="top-right" reverseOrder={false} />
     <ToastContainer
      position="top-center" 
      autoClose={3000} 
@@ -47,6 +52,9 @@ function App() {
     
     <Route path="/course" element={<Course/>}/>
     <Route path="/about" element={<AboutUs/>}/>
+    <Route path="/notificationsend" element={<SendNotification/>}/>
+    <Route path="/notification" element={< Notification/>}/>
+
     <Route path="/details" element={
       <ProtectetRoute>
     <Details/>
@@ -60,11 +68,13 @@ function App() {
       </ProtectetRoute>
       
       }/>
+      <Route path="/buy" element={<Buy/>}/>
      <Route path="/signin" element={<Signin/>}/>
      
      <Route path="/verify" element={<Verifycation/>}/>
 
      <Route path="/login" element={<Login/>}/>
+        
 
       <Route path="/logout" element={
       <ProtectetRoute>

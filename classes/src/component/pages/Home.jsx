@@ -48,6 +48,12 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
      }
 
+     const handleBuy=(e)=>{
+      e.preventDefault();
+      navigate("/buy");
+      window.scrollTo(0, 0);
+     }     
+
 
   return (
     <>
@@ -55,27 +61,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
      
     <div className="font-sans  text-gray-900">
       {/* Hero Section */}
-      {/* <section className="bg-green-300 mt-3 py-12 px-4 md:px-16 rounded-b-3xl">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between">
-          <div className="max-w-xl">
-            <h1 className="text-4xl font-bold mb-4">
-              India’s Most Trusted <br /> Live Educational Platform
-            </h1>
-            <p className="mb-6 text-lg text-gray-700">
-              Live Classes, Mock Tests, <strong>Courses</strong>, and All In One Place
-            </p>
-            <div className="flex gap-4">
-              <button className="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition">Join Free Class</button>
-              <button className="border border-blue-600 text-white px-5 bg-red-400 py-2 rounded-lg font-medium hover:bg-blue-600 transition">View Courses</button>
-            </div>
-          </div>
-          <img
-            src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg" // replace with your own if needed
-            alt="Online Education"
-            className="w-full md:w-1/2 mb-8 md:mb-0"
-          />
-        </div>
-      </section> */}
+     
         <section className="bg-gray-900 text-white py-12 px-4 md:px-16 rounded-xl m-1 " >
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="max-w-xl">
@@ -143,6 +129,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-center">
     {/* Course Card */}
+    {/* { First image} */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
@@ -165,7 +152,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
-          <button
+          <button onClick={handleBuy}
             type="button"
             className="text-white animate-blink 
               rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
@@ -186,7 +173,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
       </div>
     </div>
 
-
+    {/* { Second image} */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
@@ -209,7 +196,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
-          <button
+          <button onClick={handleBuy}
             type="button"
             className="text-white animate-blink 
               rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
@@ -229,7 +216,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
         </div>
       </div>
     </div>
-    
+
+    {/* { Third image} */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
@@ -252,7 +240,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
-          <button
+          <button onClick={handleBuy}
             type="button"
             className="text-white 
               rounded-lg text-sm px-5 py-2.5 text-center mb-2 animate-blink hover:bg-blue-800 "
@@ -274,8 +262,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
     </div>
     
      <div className='justify-center items-center'>
-        <h1 className='text-blue-700 font-sans text-3xl  text-center   justify-center items-center font-semibold '> <button className='border-2 p-2 rounded-xl text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium  border-teal-100 hover:bg-white' onClick={handleCourse}> More Courses </button>  </h1>
+        <h1 className='text-white font-sans text-3xl  text-center   justify-center items-center font-semibold '> <button className='border-2 p-2 rounded-x bg-purple-600 rounded-2xl' onClick={handleCourse}> More Courses </button>  </h1>
      </div>
     
   </div>
