@@ -5,9 +5,10 @@ import ceo from '../assets/ceo.jpg'
 import diologY from '../assets/Biologi.jpg'
 import rites from '../assets/ritesh.jpg'
 import sant from '../assets/Sant.png'
-import css from '../assets/Course1.png'
+import acmc from '../assets/class1.jpg'
 import html from '../assets/Course2.png'
 import chs from '../assets/CHS.png'
+import { toast } from 'react-toastify';
 // import ceo from '../assets/Indresh_Singh.jpg'
 
 function Home() {
@@ -41,6 +42,11 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
      }
 
+     const handleDetail =()=>{
+      console.log("button click")
+      toast.success("Comming soon !!!")
+
+     }
 
 
   return (
@@ -135,38 +141,40 @@ const [currentIndex, setCurrentIndex] = useState(0);
 <section className="bg-gray-900 py-5 px-3 md:px-16 mt-0.5 mb-0.5">
   <h1 className="text-4xl font-sans font-bold text-center mb-7 text-white ">Our Courses</h1>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-center">
     {/* Course Card */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
-        // src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
-        src={css}
+       
+        src={acmc}
         alt="CSS Course"
-        className="w-full h-48 object-cover"
+        className="w-full h-58  object-cover"
       />
 
       {/* Content */}
       <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
         <div>
-          <h1 className="text-xl font-bold mb-1">CSS</h1>
-          <h3 className="text-md mb-2">Cascading Style Sheets</h3>
-          <p className="text-sm mb-1">💰 Rs.3000</p>
-          <p className="text-sm">📅 Start Date: 2025/July/01</p>
+          <h1 className="text-xl font-bold mb-1">ACMC</h1>
+          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm flex "><h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  15/September/2025</p>
         </div>
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
           <button
             type="button"
-            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
-              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
           >
             Buy Now
           </button>
 
           <button
+           onClick={handleDetail}
             type="button"
             className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
               focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
@@ -177,36 +185,40 @@ const [currentIndex, setCurrentIndex] = useState(0);
         </div>
       </div>
     </div>
-     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+
+
+    <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
-        // src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
-        src={html}
+       
+        src={acmc}
         alt="CSS Course"
-        className="w-full h-48 object-cover"
+        className="w-full h-58  object-cover"
       />
 
       {/* Content */}
       <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
         <div>
-          <h1 className="text-xl font-bold mb-1">HTML</h1>
-          <h3 className="text-md mb-2">Cascading Style Sheets</h3>
-          <p className="text-sm mb-1">💰 Rs.3000</p>
-          <p className="text-sm">📅 Start Date: 2025/July/01</p>
+          <h1 className="text-xl font-bold mb-1">ACMC</h1>
+          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm flex "><h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  15/September/2025</p>
         </div>
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
           <button
             type="button"
-            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
-              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
           >
             Buy Now
           </button>
 
           <button
+           onClick={handleDetail}
             type="button"
             className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
               focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
@@ -218,86 +230,49 @@ const [currentIndex, setCurrentIndex] = useState(0);
       </div>
     </div>
     
-     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+    <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
       <img
-        src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
-        alt="CSS Course"
-        className="w-full h-48 object-cover"
-      />
-
-      {/* Content */}
-      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
-        <div>
-          <h1 className="text-xl font-bold mb-1">CSS</h1>
-          <h3 className="text-md mb-2">Cascading Style Sheets</h3>
-          <p className="text-sm mb-1">💰 Rs.3000</p>
-          <p className="text-sm">📅 Start Date: 2025/July/01</p>
-        </div>
-
-        {/* Buttons */}
-        <div className="flex gap-3 mt-6">
-          <button
-            type="button"
-            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
-              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
-          >
-            Buy Now
-          </button>
-
-          <button
-            type="button"
-            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
-              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
-          >
-            View Details
-          </button>
-        </div>
-      </div>
-    </div>
-     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
-      {/* Image */}
-      <img
-        // src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
-        src={chs}
-        alt="CSS Course"
-        className="w-full h-48 object-cover"
-      />
-
-      {/* Content */}
-      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
-        <div>
-          <h1 className="text-xl font-bold mb-1">CSS</h1>
-          <h3 className="text-md mb-2">Cascading Style Sheets</h3>
-          <p className="text-sm mb-1">💰 Rs.3000</p>
-          <p className="text-sm">📅 Start Date: 2025/July/01</p>
-        </div>
-
-        {/* Buttons */}
-        <div className="flex gap-3 mt-6">
-          <button
-            type="button"
-            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
-              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
-          >
-            Buy Now
-          </button>
-
-          <button
-            type="button"
-            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
-              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
-          >
-            View Details
-          </button>
-        </div>
-      </div>
        
+        src={acmc}
+        alt="CSS Course"
+        className="w-full h-58  object-cover"
+      />
+
+      {/* Content */}
+      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
+        <div>
+          <h1 className="text-xl font-bold mb-1">ACMC</h1>
+          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm flex "><h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  15/September/2025</p>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3 mt-6">
+          <button
+            type="button"
+            className="text-white 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 animate-blink hover:bg-blue-800 "
+          >
+            Buy Now
+          </button>
+
+          <button
+           onClick={handleDetail}
+            type="button"
+            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
     </div>
+    
      <div className='justify-center items-center'>
         <h1 className='text-blue-700 font-sans text-3xl  text-center   justify-center items-center font-semibold '> <button className='border-2 p-2 rounded-xl text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
               focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium  border-teal-100 hover:bg-white' onClick={handleCourse}> More Courses </button>  </h1>
@@ -333,7 +308,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
         alt="Teacher"
         className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
       />
-      <h3 className="text-lg font-semibold">Mr. </h3>
+      <h3 className="text-lg font-semibold">Mr. Mohit </h3>
       <p className="text-sm text-gray-600">Co Founder & Biology Teacher</p>
     </div>
 
