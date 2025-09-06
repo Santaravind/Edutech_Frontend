@@ -52,8 +52,16 @@ function App() {
     
     <Route path="/course" element={<Course/>}/>
     <Route path="/about" element={<AboutUs/>}/>
-    <Route path="/notificationsend" element={<SendNotification/>}/>
-    <Route path="/notification" element={< Notification/>}/>
+    <Route path="/notificationsend" element={
+      <ProtectetRoute>
+      <SendNotification/>
+      </ProtectetRoute>
+      }/>
+    <Route path="/notification" element={
+       <ProtectetRoute>      
+      < Notification/>
+      </ProtectetRoute>
+      }/>
 
     <Route path="/details" element={
       <ProtectetRoute>

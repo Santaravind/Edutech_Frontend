@@ -29,7 +29,7 @@ const Login = () => {
       // Store token and user data
       localStorage.setItem('authToken', response.data.token);
       //localStorage.setItem('userData', JSON.stringify(response.data.user));
-
+    // console.log("Login response:", response.data);
       toast.success('Login successful');
 
       // Redirect to dashboard or home page
