@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { login } from '../redux/authSlice';
 
 const Login = () => {
+
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -13,6 +17,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const apiUrl = import.meta.env.VITE_API_URL;
+  // const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -28,12 +33,17 @@ const Login = () => {
     const response= await axios.post(`${apiUrl}/auth/login`, formData);
       // Store token and user data
       localStorage.setItem('authToken', response.data.token);
-      //localStorage.setItem('userData', JSON.stringify(response.data.user));
-    // console.log("Login response:", response.data);
-      toast.success('Login successful');
+       console.log("Login response:", response.data);
+     
+     dispatch(login({
+        token: response.token,
+        user: response.user
+      }));
+    toast.success('Login successful');
 
       // Redirect to dashboard or home page
       setTimeout(() => {
+       
         navigate('/'); // Change to your target route
       }, 1500);
     } catch (error) {

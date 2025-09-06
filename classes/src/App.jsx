@@ -70,12 +70,12 @@ function App() {
       </ProtectetRoute>
       
       }/>
-    <Route path="/class" element={
+    {/* <Route path="/class" element={
       <ProtectetRoute>
     <TakeClass/>      
-      </ProtectetRoute>
+      </ProtectetRoute> 
       
-      }/>
+      }/>*/}
       <Route path="/buy" element={<Buy/>}/>
      <Route path="/signin" element={<Signin/>}/>
      
