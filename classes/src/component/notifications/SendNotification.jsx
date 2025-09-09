@@ -9,9 +9,11 @@ let stompClient = null;
  function SendNotification() {
   const [form, setForm] = useState({ title: "", message: "", link: "" });
   const [receivedNotifications, setReceivedNotifications] = useState([]);
+
+   const apiUrl = import.meta.env.VITE_API_URL;
   const connect = () => {
     if (!stompClient) {
-      const socket = new SockJS("http://localhost:8080/ws");
+      const socket = new SockJS(`${apiUrl}/ws`);
       stompClient = over(socket);
       stompClient.heartbeat.outgoing = 20000;
       stompClient.heartbeat.incoming = 20000;
