@@ -18,10 +18,21 @@ import SendNotification from "./component/notifications/SendNotification"
 import Notification from "./component/notifications/Notification"
 import { Toaster } from "react-hot-toast"
 import Buy from "./component/pages/Buy"
+import { useDispatch } from "react-redux"
+import { useEffect } from "react"
+import { login } from "./component/redux/authSlice"
 
 
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      dispatch(login(token)); // restore login
+    }
+  }, [dispatch]);
  return (
    <>
     <Toaster position="top-right" reverseOrder={false} />
