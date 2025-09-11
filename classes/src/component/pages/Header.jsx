@@ -77,7 +77,7 @@ function Header() {
                   to="/notification"
                   className="block p-1 text-xl font-serif hover:text-black"
                 >
-                  Notification
+                  My Class
                 </Link>
               </button>
               {notifOpen && (
@@ -102,7 +102,7 @@ function Header() {
                 to="/signin"
                 className="hover:text-gray-300 text-2xl font-serif"
               >
-                Sign In
+                Sign in
               </Link>
               <Link
                 to="/login"
@@ -156,7 +156,7 @@ function Header() {
                   to="/notification"
                   className="block p-1 text-xl font-serif hover:text-gray-300"
                 >
-                  Notification
+                    My Class
                 </Link>
               </button>
               {notifOpen && (
@@ -179,7 +179,7 @@ function Header() {
                 to="/signin"
                 className="block text-xl font-serif hover:text-gray-300 border-2 rounded-xl justify-center text-center p-0.5 hover:bg-black"
               >
-                Sign In
+                Sign in
               </Link>
               <Link
                 to="/login"
