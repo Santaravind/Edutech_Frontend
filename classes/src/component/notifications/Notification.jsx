@@ -21,7 +21,7 @@ const [notifications, setNotifications] = useState([]);
 
   return (
     <div className="max-w-2xl mx-auto mt-10 p-6  bg-rose-300 rounded-2xl shadow-lg mb-4">
-      <h2 className="text-2xl font-bold mb-6 text-black">📜 Notifications</h2>
+      <h2 className="text-2xl font-bold mb-6 text-black">📜 To Day Schedule Classes</h2>
 
       {notifications.length === 0 ? (
         <p className="text-gray-500">No notifications yet.</p>
