@@ -43,14 +43,15 @@ const [currentIndex, setCurrentIndex] = useState(0);
      }
 
      const handleDetail =()=>{
-      console.log("button click")
+      //console.log("button click")
       toast.success("Comming soon !!!")
 
      }
 
      const handleBuy=(e)=>{
       e.preventDefault();
-      navigate("/buy");
+      toast.success("Comming soon !!! ")
+      // navigate("/buy");
       window.scrollTo(0, 0);
      }     
 
@@ -59,10 +60,10 @@ const [currentIndex, setCurrentIndex] = useState(0);
     <>
    
      
-    <div className="font-sans  text-gray-900">
+    <div className="font-sans bg-black text-gray-900">
       {/* Hero Section */}
      
-        <section className="bg-gray-900 text-white py-12 px-4 md:px-16 rounded-xl m-1 " >
+        <section className="bg-gray-900 text-white py-12 px-4 md:px-16 rounded-xl m-.5 " >
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="max-w-xl">
             <h1 className="text-4xl font-bold mb-4">
@@ -89,7 +90,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
       </section>
 
      {/* {slider section} */}
-     <div className="w-full h-20 flex items-center justify-center bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 text-white text-lg font-medium m-1 rounded-lg mr-1">
+     <div className="w-full h-20 flex items-center justify-center bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 text-white text-lg font-medium m-1 rounded-lg mr-1 ml-0.5">
       <div className="flex items-center gap-3 transition-opacity duration-700 ease-in-out">
         <span className="text-xl">{texts[currentIndex].icon}</span>
         <span>{texts[currentIndex].text}</span>
@@ -108,13 +109,16 @@ const [currentIndex, setCurrentIndex] = useState(0);
       <div className="text-blue-600 text-6xl mb-2">👨‍🏫</div>
       <p className="font-medium">Expert Teachers</p>
     </div>
-     <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white text-3xl">
-      <div className="text-blue-600 text-6xl mb-2">🎥</div>
-      <p className="font-medium">Class Recordings Available</p>
-    </div>
+    <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white">
+  <div className="text-blue-600 text-4xl sm:text-5xl md:text-6xl mb-2">🎥</div>
+  <p className="font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl">
+    Class Recordings Available
+  </p>
+</div>
+
     <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white text-3xl " >
       <div className="text-blue-600 text-6xl mb-2">📚 </div>
-       <p className="font-medium mt-6 hover:bg-white rounded-xl p-1 hover:text-blue-800">
+       <p className="font-medium mt-0.5 mb-2 rounded-xl p-1 hover:bg-blue-600 ">
     <button onClick={handleBook}>Buy Books</button>
   </p>
     </div>
@@ -308,18 +312,20 @@ const [currentIndex, setCurrentIndex] = useState(0);
         className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
       />
       <h3 className="text-lg font-semibold">Mr.Ritesh Kumar</h3>
-      <p className="text-sm text-gray-600">Co Founder & Teacher</p>
+      <p className="text-sm text-black">Co Founder & Teacher</p>
     </div>
 
       {/* Teacher3 */}
-    <div className="bg-white rounded-xl shadow-md p-6 text-center hover:bg-red-500">
+    <div className="bg-white rounded-xl shadow-md p-6 text-center cursor-pointer">
       <img
          src={sant}
         alt="Teacher"
-        className="w-24 h-24 mx-auto rounded-full mb-5 object-cover"
+        className="w-24 h-24 mx-auto rounded-full mb-5 object-cover "
       />
       <h3 className="text-lg font-semibold">Aravind Sant Singh</h3>
-      <p className="text-sm text-gray-600">Bachelor in computer Science</p>
+      <span className="text-[3xl] text-gray-900  ">
+        Software Developer
+      </span>
     </div>
   </div>
 </section>

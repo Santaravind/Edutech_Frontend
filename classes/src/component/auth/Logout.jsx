@@ -4,7 +4,7 @@ function Logout() {
     const navigate=useNavigate();
 useEffect(()=>{
     localStorage.removeItem("authToken")
-    navigate("/home");
+    navigate("/");
 },[])
     
   return (

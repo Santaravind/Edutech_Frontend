@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../redux/authSlice';
+import { addEmail } from '../redux/emailSlice';
 
 const Login = () => {
 
@@ -29,11 +30,13 @@ const Login = () => {
     setLoading(true);
 
     try {
-      console.log(formData);
+     // console.log(formData);
+      
     const response= await axios.post(`${apiUrl}/auth/login`, formData);
       // Store token and user data
       localStorage.setItem('authToken', response.data.token);
-       console.log("Login response:", response.data);
+      dispatch(addEmail(formData.email));
+      // console.log("Login response:", response.data);
      
      dispatch(login({
         token: response.token,

@@ -14,7 +14,7 @@ function Header() {
  const navigate = useNavigate();
     const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
- 
+  const email=useSelector((state)=>state.email.email)
 
   // Check login state on load
   useEffect(() => {
@@ -80,8 +80,10 @@ function Header() {
                   My Class
                 </Link>
               </button>
-              {notifOpen && (
+              {/* Send notification  */}
+              {notifOpen && (email==='aravindsant563@gmail.com'|| email==='happydigitalbharat@gmail.com'||email==='mspoojaconstruction02282@gmail.com')&&(
                 <div className="absolute mt-2 bg-purple-400 text-black rounded-xl shadow-lg w-40">
+                
                   <Link
                     to="/notificationsend"
                     className="block px-4 py-2 bg-rose-500 rounded-xl hover:bg-gray-200"
@@ -159,7 +161,7 @@ function Header() {
                     My Class
                 </Link>
               </button>
-              {notifOpen && (
+              {notifOpen &&(email==='aravindsant563@gmail.com'|| email==='happydigitalbharat@gmail.com')&& (
                 <div className="font-serif">
                   <Link
                     to="/notificationsend"
