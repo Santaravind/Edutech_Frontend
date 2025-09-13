@@ -148,7 +148,7 @@ const Signin = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* First Name */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+          <label className="block text-sm font-medium  text-gray-700 mb-2">First Name *</label>
           <div className="relative">
             <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
             <input
@@ -163,7 +163,7 @@ const Signin = () => {
           </div>
         </div>
 
-        {/* Middle Name */}
+        {/* Middle Name  it wrking but change in some of student demand*/}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Middle Name</label>
           <div className="relative">
@@ -173,7 +173,7 @@ const Signin = () => {
               name="middleName"
               value={formData.middleName}
               onChange={handleChange}
-              placeholder="Enter middle name"
+              placeholder="Middle name not compulsory"
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             />
           </div>
