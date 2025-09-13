@@ -102,13 +102,13 @@ function Header() {
             <>
               <Link
                 to="/signin"
-                className="hover:text-gray-300 text-2xl font-serif"
+                className="hover:text-gray-900 text-2xl font-serif"
               >
-                Sign in
+                New Student
               </Link>
               <Link
                 to="/login"
-                className="hover:text-gray-300 text-2xl font-serif "
+                className="hover:text-gray-900 text-2xl font-serif "
               >
                 Login
               </Link>
@@ -156,7 +156,7 @@ function Header() {
                 <Bell className="w-6 h-6 mr-2" />
                 <Link
                   to="/notification"
-                  className="block p-1 text-xl font-serif hover:text-gray-300"
+                  className="block p-1 text-xl font-serif hover:text-gray-900"
                 >
                     My Class
                 </Link>
@@ -181,7 +181,7 @@ function Header() {
                 to="/signin"
                 className="block text-xl font-serif hover:text-gray-300 border-2 rounded-xl justify-center text-center p-0.5 hover:bg-black"
               >
-                Sign in
+               New Student 
               </Link>
               <Link
                 to="/login"
