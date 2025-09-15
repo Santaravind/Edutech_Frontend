@@ -23,7 +23,7 @@ import { useEffect } from "react"
 import { login } from "./component/redux/authSlice"
 import ArduinoCouse from "./component/pages/ArduinoCouse"
 import Olevel from "./component/pages/Olevel"
-import CCourse from "./component/pages/Ccourse"
+import CCourse from "./component/pages/CCourse.jsx"
 
 
 
