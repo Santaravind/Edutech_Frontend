@@ -63,6 +63,12 @@ const [currentIndex, setCurrentIndex] = useState(0);
       e.preventDefault();
       navigate("/ccourse");
      }
+     const handleJoin=(e)=>{
+      e.preventDefault();
+     window.open("https://meet.google.com/dto-evxp-oft", "_blank", "noopener,noreferrer");
+
+     }
+
 
 
   return (
@@ -82,9 +88,20 @@ const [currentIndex, setCurrentIndex] = useState(0);
               Live Classes, Mock Tests, <strong>Courses</strong>, and All In One Place
             </p>
             <div className="flex gap-4">
-              <button className="bg-yellow-400 text-gray-900 px-5 py-2 rounded-lg font-medium hover:bg-yellow-500 transition">
-                Join Free Class
-              </button>
+             <button 
+   className="relative bg-yellow-400 text-gray-900 px-5 py-2 rounded-lg font-medium hover:bg-yellow-500 transition group"
+     onClick={handleJoin}
+>
+  Join Free Class
+
+  {/* Tooltip */}
+  <span className="absolute top-7 left-1/2 -translate-x-1/2 
+                   bg-gray-800 text-white text-sm px-3 py-1 rounded-md 
+                   opacity-0 group-hover:opacity-100 transition">
+    Class Timing: 8:45 PM
+  </span>
+</button>
+
               <button className="bg-white text-indigo-600 px-5 py-2 rounded-lg font-medium hover:bg-gray-100 transition" onClick={handleCourse}>
                 View Courses
               </button>
