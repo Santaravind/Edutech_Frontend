@@ -11,7 +11,7 @@ import Verifycation from "./component/auth/Verifycation"
 import { ToastContainer } from "react-toastify"
 import ProtectetRoute from "./component/route/ProtectetRoute"
 import Logout from "./component/auth/Logout"
-import TakeClass from "./component/pages/TakeClass"
+
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from "./component/route/ScrollToTop"
 import SendNotification from "./component/notifications/SendNotification"
@@ -21,6 +21,10 @@ import Buy from "./component/pages/Buy"
 import { useDispatch } from "react-redux"
 import { useEffect } from "react"
 import { login } from "./component/redux/authSlice"
+import ArduinoCouse from "./component/pages/ArduinoCouse"
+import Olevel from "./component/pages/Olevel"
+import CCourse from "./component/pages/Ccourse"
+
 
 
 
@@ -81,12 +85,18 @@ function App() {
       </ProtectetRoute>
       
       }/>
-    {/* <Route path="/class" element={
-      <ProtectetRoute>
-    <TakeClass/>      
-      </ProtectetRoute> 
-      
-      }/>*/}
+    <Route path="/arduino" element={
+     <ArduinoCouse/>      
+          
+      }/>
+      <Route path="/olevel" element={
+     <Olevel/>      
+          
+      }/>
+      <Route path="/ccourse" element={
+     <CCourse/>      
+          
+      }/>
       <Route path="/buy" element={<Buy/>}/>
      <Route path="/signin" element={<Signin/>}/>
      

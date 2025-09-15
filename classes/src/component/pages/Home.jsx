@@ -6,8 +6,8 @@ import diologY from '../assets/Biologi.jpg'
 import rites from '../assets/ritesh.jpg'
 import sant from '../assets/Sant.png'
 import acmc from '../assets/class1.jpg'
-import html from '../assets/Course2.png'
-import chs from '../assets/CHS.png'
+import o from '../assets/Olevel.jpg'
+import ccc from '../assets/CCC.png'
 import { toast } from 'react-toastify';
 // import ceo from '../assets/Indresh_Singh.jpg'
 
@@ -44,16 +44,25 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
      const handleDetail =()=>{
       //console.log("button click")
-      toast.success("Comming soon !!!")
+      //toast.success("Comming soon !!!")
+      navigate("/course")
 
      }
 
-     const handleBuy=(e)=>{
+     const handleaBuy=(e)=>{
       e.preventDefault();
-      toast.success("Comming soon !!! ")
-      // navigate("/buy");
+      navigate("/arduino");
       window.scrollTo(0, 0);
      }     
+     const handlOBuy=(e)=>{
+    e.preventDefault();
+    navigate("/olevel");
+     }
+
+     const handlCBuy=(e)=>{
+      e.preventDefault();
+      navigate("/ccourse");
+     }
 
 
   return (
@@ -156,7 +165,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
-          <button onClick={handleBuy}
+          <button onClick={handleaBuy}
             type="button"
             className="text-white animate-blink 
               rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
@@ -165,7 +174,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
           </button>
 
           <button
-           onClick={handleDetail}
+           onClick={handleaBuy}
             type="button"
             className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
               focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
@@ -182,16 +191,16 @@ const [currentIndex, setCurrentIndex] = useState(0);
       {/* Image */}
       <img
        
-        src={acmc}
-        alt="CSS Course"
+        src={o}
+        alt="O-level Course"
         className="w-full h-58  object-cover"
       />
 
       {/* Content */}
       <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
         <div>
-          <h1 className="text-xl font-bold mb-1">ACMC</h1>
-          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          <h1 className="text-xl font-bold mb-1">O-Level</h1>
+          <h3 className="text-md mb-2 font-semibold">O-Level Online Course
           </h3>
           <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
           <p className="text-sm flex "><h3 className='mr-1
@@ -200,7 +209,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
-          <button onClick={handleBuy}
+          <button onClick={handlOBuy}
             type="button"
             className="text-white animate-blink 
               rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
@@ -209,7 +218,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
           </button>
 
           <button
-           onClick={handleDetail}
+           onClick={handlOBuy}
             type="button"
             className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
               focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
@@ -226,7 +235,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
       {/* Image */}
       <img
        
-        src={acmc}
+        src={ccc}
         alt="CSS Course"
         className="w-full h-58  object-cover"
       />
@@ -234,17 +243,17 @@ const [currentIndex, setCurrentIndex] = useState(0);
       {/* Content */}
       <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
         <div>
-          <h1 className="text-xl font-bold mb-1">ACMC</h1>
-          <h3 className="text-md mb-2 font-semibold">Arduino Coding Master Class
+          <h1 className="text-xl font-bold mb-1">CCC</h1>
+          <h3 className="text-md mb-2 font-semibold">Course on Computer Concepts
           </h3>
-          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 999.00</p>
           <p className="text-sm flex "><h3 className='mr-1
-           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  15/September/2025</p>
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  22/September/2025</p>
         </div>
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
-          <button onClick={handleBuy}
+          <button onClick={handlCBuy}
             type="button"
             className="text-white 
               rounded-lg text-sm px-5 py-2.5 text-center mb-2 animate-blink hover:bg-blue-800 "
@@ -253,7 +262,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
           </button>
 
           <button
-           onClick={handleDetail}
+           onClick={handlCBuy}
             type="button"
             className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
               focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
