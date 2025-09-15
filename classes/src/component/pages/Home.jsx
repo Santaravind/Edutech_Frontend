@@ -246,7 +246,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
           <h1 className="text-xl font-bold mb-1">CCC</h1>
           <h3 className="text-md mb-2 font-semibold">Course on Computer Concepts
           </h3>
-          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 999.00</p>
           <p className="text-sm flex "><h3 className='mr-1
            text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>  22/September/2025</p>
         </div>
