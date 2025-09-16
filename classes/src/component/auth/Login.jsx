@@ -53,7 +53,7 @@ const Login = () => {
       const resData = error.response?.data;
 
       // Show error toast
-      toast.error(resData?.error || 'Network error. Please try again.');
+      toast.error(resData?.error || 'Your email or password is wrong. Please try again.');
 
       // If backend tells to verify email
       if (resData?.needsVerification) {
