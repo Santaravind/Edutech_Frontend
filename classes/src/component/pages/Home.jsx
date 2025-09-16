@@ -9,6 +9,7 @@ import acmc from '../assets/class1.jpg'
 import o from '../assets/Olevel.jpg'
 import ccc from '../assets/CCC.png'
 import { toast } from 'react-toastify';
+import Rating from './Rating';
 // import ceo from '../assets/Indresh_Singh.jpg'
 
 function Home() {
@@ -301,7 +302,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
     
     {/* Teachers */}
     <section className="bg-gray-800 py-12 px-4 md:px-16 mt-0.5 mb-0.5">
-  <h2 className="text-3xl font-bold text-center mb-10 text-blue-700 font-sans ">Our Teachers</h2>
+  <h2 className="text-3xl font-bold text-center mb-10 text-white font-sans ">Our Teachers</h2>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
     
@@ -359,45 +360,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
 
       {/* About Section */}
-      <section className="py-12 px-4 md:px-16 text-center bg-gray-800 mt-0.5 mb-0.5">
-        <h2 className="text-2xl font-bold mb-8 text-blue-700 font-sans ">About </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            {
-              name: 'Meenakshi',
-              text: 'Itarichew speak able and never tellingiciclete.',
-              tag: 'Free',
-            },
-            {
-              name: 'Ravi',
-              text: 'The rider eno-e stimuld with excellent Finns.',
-              tag: 'Raii',
-            },
-            {
-              name: 'Sneha',
-              text: 'Anuby treriserviciding experience user.',
-              tag: 'Spiha',
-            },
-            {
-              name: 'Sianthia',
-              text: 'Heapy and sometiment with volusabler.',
-              tag: 'Sneha',
-            },
-          ].map((person, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg p-4">
-              <img
-                src={`https://randomuser.me/api/portraits/women/${index + 10}.jpg`}
-                alt={person.name}
-                className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h4 className="font-semibold text-lg">{person.name}</h4>
-              <div className="text-yellow-500 my-1">★★★★★</div>
-              <p className="text-sm text-gray-600">‘{person.text}’</p>
-              <p className="text-blue-600 font-medium mt-2">{person.tag}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+     
+      <Rating/>
     </div>
   
 
