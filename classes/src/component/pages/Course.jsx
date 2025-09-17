@@ -13,7 +13,10 @@ function Home() {
     e.preventDefault();
     navigate('/ccourse') 
    }
-
+const handalOBuy=(e)=>{
+  e.preventDefault();
+  window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
+      }
    const handalAclick=(e)=>{
     e.preventDefault();
     // toast.success("click audin")
@@ -79,7 +82,7 @@ function Home() {
 
        
           {/* Course Fee */}
-            <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center hover:bg-blue-600">
+            <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center ">
               <button onClick={handalAclick}>             
               <p className="text-lg font-bold text-gray-800">
                 💰 Course Fee:{" "}
@@ -133,7 +136,7 @@ function Home() {
     
 
     {/* Course Fee */}
-    <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center hover:bg-blue-600">
+    <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center">
       <button  onClick={handalClick}>
       <p className="text-lg font-bold text-gray-800">
         💰 Course Fee:{" "}
@@ -173,6 +176,8 @@ function Home() {
         <li>Class time (IST): 8:45 PM — 10:00 PM (Every class / Batch)</li>
         <li>Price: ₹499 / month</li>
         <li>Duration: Approx. 8 months</li>
+        <li>Mode: 100% Online (Live + Recorded sessions)</li>
+        <li>Certificate: Government-recognized certificate on successful completion</li>
       </ul>
     </div>
 
@@ -185,13 +190,18 @@ function Home() {
         Read More
       </button>
   
-
+ <button
+        onClick={handalOBuy}
+        className=" bg-blue-900 text-white hover:bg-yellow-300 hover:text-black ml-3 px-5 py-2 rounded-lg hover:bg-[oklch(70.7%_0.165_254.624)] transition"
+      >
+        Buy now
+      </button>
     {/* Extra Details (shown only when "Read More" is clicked) */}
     
 
     {/* Course Fee */}
-   <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center hover:bg-blue-600">
-      <button  onClick={handalOlevel}>
+   <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center ">
+      <button  onClick={handalOBuy}>
       <p className="text-lg font-bold text-gray-800">
         💰 Course Fee:{" "}
         <span className="text-red-500 text-2xl">₹999/-</span> (Full Course – 90

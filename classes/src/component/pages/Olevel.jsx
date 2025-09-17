@@ -4,12 +4,17 @@ import toast from "react-hot-toast";
 
 export default function Olevel() {
     const navigate=useNavigate();
-    const handOlevel=()=>{
-      //  window.location.href="https://forms.gle/3y3fVZ5k9z4K8t7U8";
-    //  navigate("/buy");
-    toast.success("comming very  soon...")
-        window.scrollTo(0, 0);
-    }
+    // const handOlevel=()=>{
+    //   //  window.location.href="https://forms.gle/3y3fVZ5k9z4K8t7U8";
+    // //  navigate("/buy");
+    // toast.success("comming very  soon...")
+    //     window.scrollTo(0, 0);
+    // }
+    const handlOBuy=(e)=>{
+    e.preventDefault();
+    window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
+   // navigate("/olevel");
+     }
   return (
     <>
     <div className="justify-center items-center flex bg-[oklch(86.9%_0.022_252.894)]">
@@ -126,11 +131,21 @@ export default function Olevel() {
             <li>Phone / WhatsApp: +91-8957445211</li>
           </ul>
         </div>
+         <div className="justify-center items-center ">
+          <button onClick={handlOBuy}
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5  py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            Buy Now
+          </button>
+         </div>
+       
 
         {/* Course Fee */}
-        <div className="bg-teal-100 p-4 mt-4 rounded-lg text-center">
+        <div className="bg-teal-100 p-4 mt-4  rounded-lg text-center">
             <button 
-            onClick={handOlevel}
+            onClick={handlOBuy}
             className="w-full h-full">
           <p className="text-lg font-bold text-gray-800">
             💰 Course Fee:{" "}

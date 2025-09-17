@@ -10,7 +10,7 @@ import o from '../assets/Olevel.jpg'
 import ccc from '../assets/CCC.png'
 import { toast } from 'react-toastify';
 import Rating from './Rating';
-// import ceo from '../assets/Indresh_Singh.jpg'
+
 
 function Home() {
   const navigate=useNavigate();
@@ -44,8 +44,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
      }
 
      const handleDetail =()=>{
-      //console.log("button click")
-      //toast.success("Comming soon !!!")
+     
       navigate("/course")
 
      }
@@ -57,8 +56,15 @@ const [currentIndex, setCurrentIndex] = useState(0);
      }     
      const handlOBuy=(e)=>{
     e.preventDefault();
-    navigate("/olevel");
+    window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
+   
      }
+     
+     const handlOView=(e)=>{
+      e.preventDefault();
+      navigate("/olevel");
+     }
+
 
      const handlCBuy=(e)=>{
       e.preventDefault();
@@ -236,7 +242,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
           </button>
 
           <button
-           onClick={handlOBuy}
+           onClick={ handlOView}
             type="button"
             className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
               focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
