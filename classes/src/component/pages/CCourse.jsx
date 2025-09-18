@@ -8,9 +8,15 @@ const CCourse = () => {
    const navigate=useNavigate();
     const handlClick=(e)=>{
         e.preventDefault();
-        // navigate('/buy');
-        toast.success("comming very soon....");
-    }
+        window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
+      }
+
+    //CCC 
+     const handalCBuy=(e)=>{
+  e.preventDefault();
+  window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
+      }
+     
 
   return (
     <>
@@ -76,7 +82,15 @@ const CCourse = () => {
               </ul>
             </div>
         
-            
+              <div className="justify-center items-center ">
+          <button onClick={handalCBuy}
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5  py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            Buy Now
+          </button>
+         </div>
 
         {/* Course Fee */}
         <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center hover:bg-blue-600">

@@ -13,10 +13,23 @@ function Home() {
     e.preventDefault();
     navigate('/ccourse') 
    }
+   //O Level 
 const handalOBuy=(e)=>{
   e.preventDefault();
   window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
       }
+//Arduino 
+   const handalABuy=(e)=>{
+  e.preventDefault();
+  window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
+      }
+
+      //CCC
+const handalCBuy=(e)=>{
+  e.preventDefault();
+  window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
+      }
+
    const handalAclick=(e)=>{
     e.preventDefault();
     // toast.success("click audin")
@@ -79,11 +92,17 @@ const handalOBuy=(e)=>{
             Read More
           </button>
        
+    <button
+        onClick={handalABuy}
+        className=" bg-blue-900 text-white hover:bg-yellow-300 hover:text-black ml-3 px-5 py-2 rounded-lg hover:bg-[oklch(70.7%_0.165_254.624)] transition"
+      >
+        Buy now
+      </button>
 
        
           {/* Course Fee */}
             <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center ">
-              <button onClick={handalAclick}>             
+              <button onClick={handalABuy}>             
               <p className="text-lg font-bold text-gray-800">
                 💰 Course Fee:{" "}
                 <span className="text-red-500 text-2xl">₹499/-</span> (Full Course)
@@ -130,14 +149,18 @@ const handalOBuy=(e)=>{
       >
         Read More
       </button>
-
-        
-
+  
+    <button
+        onClick={handalCBuy}
+        className=" bg-blue-900 text-white hover:bg-yellow-300 hover:text-black ml-3 px-5 py-2 rounded-lg hover:bg-[oklch(70.7%_0.165_254.624)] transition"
+      >
+        Buy now
+      </button>
     
 
     {/* Course Fee */}
     <div className="bg-teal-100 p-4 mt-2 rounded-lg text-center">
-      <button  onClick={handalClick}>
+      <button  onClick={handalCBuy}>
       <p className="text-lg font-bold text-gray-800">
         💰 Course Fee:{" "}
         <span className="text-red-500 text-2xl">₹999/-</span> (Full Course – 90
