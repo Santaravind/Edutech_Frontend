@@ -10,6 +10,7 @@ import o from '../assets/Olevel.jpg'
 import ccc from '../assets/CCC.png'
 import { toast } from 'react-toastify';
 import Rating from './Rating';
+import { useSelector } from 'react-redux';
 
 
 function Home() {
@@ -23,7 +24,7 @@ function Home() {
 
  
 const [currentIndex, setCurrentIndex] = useState(0);
-
+ const email=useSelector((state)=>state.email.email)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev === texts.length - 1 ? 0 : prev + 1));
@@ -56,6 +57,11 @@ const [currentIndex, setCurrentIndex] = useState(0);
      }     
      const handlOBuy=(e)=>{
     e.preventDefault();
+    if (!email) {
+     navigate("/login");
+     toast.success("If you want ot buy Course , Please login to continue..");
+     return;
+      }
     window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
    
      }
@@ -63,12 +69,22 @@ const [currentIndex, setCurrentIndex] = useState(0);
      //Arduino 
    const handalABuy=(e)=>{
   e.preventDefault();
+    if (!email) { 
+        navigate("/login");
+        toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+    }
   window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
       }
 
 //CCC 
      const handalCBuy=(e)=>{
   e.preventDefault();
+   if (!email) { 
+        navigate("/login");
+        toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+    }
   window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
       }
      

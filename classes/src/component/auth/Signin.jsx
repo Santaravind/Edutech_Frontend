@@ -242,7 +242,7 @@ const Signin = () => {
               name="mobileNo"
               value={formData.mobileNo}
               onChange={handleChange}
-              placeholder="Enter mobile number"
+              placeholder="Enter valid  mobile number"
               required
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             />
@@ -259,7 +259,7 @@ const Signin = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Enter email address"
+              placeholder="Enter valid  email Id for OTP & verification"
               required
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             />
@@ -297,7 +297,7 @@ const Signin = () => {
         className="w-full mt-8 bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
       >
         {loading && <Loader className="animate-spin" size={20} />}
-        {loading ? 'Creating Account...' : 'Sign Up'}
+        {loading ? 'Creating Account...' : 'Sign In'}
       </button>
 </form> 
       <div className="mt-6 text-center">

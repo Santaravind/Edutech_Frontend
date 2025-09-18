@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import o from "../assets/Olevel.jpg"; // update path if needed
-import toast from "react-hot-toast";
+import { toast } from 'react-toastify';
+import { useSelector } from "react-redux";
 
 export default function Olevel() {
     const navigate=useNavigate();
+     const email=useSelector((state)=>state.email.email)
     // const handOlevel=()=>{
     //   //  window.location.href="https://forms.gle/3y3fVZ5k9z4K8t7U8";
     // //  navigate("/buy");
@@ -12,6 +14,11 @@ export default function Olevel() {
     // }
     const handlOBuy=(e)=>{
     e.preventDefault();
+      if (!email) {
+     navigate("/login");
+     toast.success("If you want ot buy Course , Please login to continue..");
+     return;
+      }
     window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
    // navigate("/olevel");
      }

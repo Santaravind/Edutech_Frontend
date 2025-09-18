@@ -86,15 +86,22 @@ function App() {
       
       }/>
     <Route path="/arduino" element={
-     <ArduinoCouse/>      
-          
+       
+       <ArduinoCouse/> 
+                 
       }/>
+
       <Route path="/olevel" element={
-     <Olevel/>      
-          
+       
+         <Olevel/>   
+              
       }/>
+
       <Route path="/ccourse" element={
-     <CCourse/>      
+       
+         <CCourse/> 
+        
+         
           
       }/>
       <Route path="/buy" element={<Buy/>}/>
