@@ -59,6 +59,18 @@ const [currentIndex, setCurrentIndex] = useState(0);
     window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
    
      }
+
+     //Arduino 
+   const handalABuy=(e)=>{
+  e.preventDefault();
+  window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
+      }
+
+//CCC 
+     const handalCBuy=(e)=>{
+  e.preventDefault();
+  window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
+      }
      
      const handlOView=(e)=>{
       e.preventDefault();
@@ -189,7 +201,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
-          <button onClick={handleaBuy}
+          <button onClick={handalABuy}
             type="button"
             className="text-white animate-blink 
               rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
@@ -277,7 +289,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
         {/* Buttons */}
         <div className="flex gap-3 mt-6">
-          <button onClick={handlCBuy}
+          <button onClick={handalCBuy}
             type="button"
             className="text-white 
               rounded-lg text-sm px-5 py-2.5 text-center mb-2 animate-blink hover:bg-blue-800 "

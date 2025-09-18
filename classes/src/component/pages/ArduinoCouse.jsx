@@ -6,9 +6,14 @@ export default function ArduinoCouse() {
    const navigate=useNavigate();
     const handalClick=(e)=>{
         e.preventDefault();
-        // navigate('/buy');
-        toast.success("comming very soon...")
-    }
+        window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
+      }
+
+       //Arduino 
+   const handalABuy=(e)=>{
+  e.preventDefault();
+  window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
+      }
   return (
     <>    <div className='bg-[oklch(86.9%_0.022_252.894)]'> 
     <div className="bg-white text-black rounded-2xl shadow-lg overflow-hidden max-w-2xl w-full flex flex-col mx-auto my-6">
@@ -66,6 +71,15 @@ export default function ArduinoCouse() {
           </ul>
         </div>
 
+            <div className="justify-center items-center ">
+          <button onClick={handalABuy}
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5  py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            Buy Now
+          </button>
+         </div>
         {/* Course Fee */}
         <div className="bg-teal-100 p-4 mt-4 rounded-lg text-center">
           <button onClick={handalClick}>
