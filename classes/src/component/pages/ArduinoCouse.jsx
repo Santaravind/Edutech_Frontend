@@ -1,17 +1,29 @@
-import toast from 'react-hot-toast';
+import { toast } from 'react-toastify';
 import acmc from '../assets/class1.jpg'; // update path
 import { useNavigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 export default function ArduinoCouse() {
    const navigate=useNavigate();
+    const email=useSelector((state)=>state.email.email)
     const handalClick=(e)=>{
         e.preventDefault();
+         if (!email) {
+       navigate("/login");
+        toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+        }
         window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
       }
 
        //Arduino 
    const handalABuy=(e)=>{
   e.preventDefault();
+  if (!email) {
+       navigate("/login");
+        toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+    }
   window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
       }
   return (
