@@ -245,8 +245,7 @@ const handalCBuy=(e)=>{
       <button  onClick={handalOBuy}>
       <p className="text-lg font-bold text-gray-800">
         💰 Course Fee:{" "}
-        <span className="text-red-500 text-2xl">₹999/-</span> (Full Course – 90
-        Days)
+        <span className="text-red-500 text-2xl">₹499/-</span> (Per Months)
       </p>
       </button>
     </div>
