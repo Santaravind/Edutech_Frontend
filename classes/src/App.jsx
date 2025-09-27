@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Header from "./component/pages/Header"
 import Home from "./component/pages/Home"
 import Course from "./component/pages/Course"
-import AboutUs from "./component/pages/AboutUs"
+// import AboutUs from "./component/pages/AboutUs"
 import Footer from "./component/pages/Footer"
 import Signin from "./component/auth/Signin"
 import Login from "./component/auth/Login"
@@ -24,6 +24,9 @@ import { login } from "./component/redux/authSlice"
 import ArduinoCouse from "./component/pages/ArduinoCouse"
 import Olevel from "./component/pages/Olevel"
 import CCourse from "./component/pages/CCourse.jsx"
+import AboutUs from "./component/aboutPages/AboutUs.jsx"
+import Indresh from "./component/aboutPages/Indresh.jsx"
+import Aravind from "./component/aboutPages/Aravind.jsx"
 
 
 
@@ -66,7 +69,11 @@ function App() {
     <Route path="/" element={<Home/>}/>
     
     <Route path="/course" element={<Course/>}/>
+    {/* //Abous us pages */}
     <Route path="/about" element={<AboutUs/>}/>
+    <Route path="/indresh" element={<Indresh/>}/>
+    <Route path="/sant" element={<Aravind/>}/>
+
     <Route path="/notificationsend" element={
       <ProtectetRoute>
       <SendNotification/>
@@ -86,15 +93,22 @@ function App() {
       
       }/>
     <Route path="/arduino" element={
-     <ArduinoCouse/>      
-          
+       
+       <ArduinoCouse/> 
+                 
       }/>
+
       <Route path="/olevel" element={
-     <Olevel/>      
-          
+       
+         <Olevel/>   
+              
       }/>
+
       <Route path="/ccourse" element={
-     <CCourse/>      
+       
+         <CCourse/> 
+        
+         
           
       }/>
       <Route path="/buy" element={<Buy/>}/>

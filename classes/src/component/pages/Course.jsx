@@ -4,11 +4,13 @@ import o from '../assets/Olevel.jpg'
 import ccc from '../assets/CCC.png'
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import { useSelector} from 'react-redux';
 function Home() {
   const navigate=useNavigate();
   
-  const[oDetails,setODetails]=useState(false);
-
+  //const[oDetails,setODetails]=useState(false);
+  const email=useSelector((state)=>state.email.email)
+  
   const handalClick = (e)=>{
     e.preventDefault();
     navigate('/ccourse') 
@@ -16,17 +18,33 @@ function Home() {
    //O Level 
 const handalOBuy=(e)=>{
   e.preventDefault();
+   if (!email) {
+      navigate("/login");
+     toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+    }
   window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
       }
+
 //Arduino 
    const handalABuy=(e)=>{
   e.preventDefault();
+     if (!email) {
+       navigate("/login");
+        toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+    }
   window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
       }
 
       //CCC
 const handalCBuy=(e)=>{
   e.preventDefault();
+   if (!email) {
+       navigate("/login");
+       toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+    }
   window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
       }
 
@@ -227,8 +245,7 @@ const handalCBuy=(e)=>{
       <button  onClick={handalOBuy}>
       <p className="text-lg font-bold text-gray-800">
         💰 Course Fee:{" "}
-        <span className="text-red-500 text-2xl">₹999/-</span> (Full Course – 90
-        Days)
+        <span className="text-red-500 text-2xl">₹499/-</span> (Per Months)
       </p>
       </button>
     </div>

@@ -2,18 +2,30 @@
 import React from "react";
 import ccc from '../assets/CCC.png'
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-hot-toast";
+import { toast } from 'react-toastify';
+import { useSelector } from "react-redux";
 
 const CCourse = () => {
    const navigate=useNavigate();
+    const email=useSelector((state)=>state.email.email)
     const handlClick=(e)=>{
         e.preventDefault();
+        if(!email){
+          navigate("/login");
+          toast.success("If you want ot buy Course , Please login to continue..");
+          return;
+        }
         window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
       }
 
     //CCC 
      const handalCBuy=(e)=>{
   e.preventDefault();
+   if(!email){
+          navigate("/login");
+          toast.success("If you want ot buy Course , Please login to continue..");
+          return;
+        }
   window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
       }
      

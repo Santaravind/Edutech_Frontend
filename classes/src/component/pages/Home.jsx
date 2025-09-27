@@ -10,6 +10,7 @@ import o from '../assets/Olevel.jpg'
 import ccc from '../assets/CCC.png'
 import { toast } from 'react-toastify';
 import Rating from './Rating';
+import { useSelector } from 'react-redux';
 
 
 function Home() {
@@ -23,7 +24,7 @@ function Home() {
 
  
 const [currentIndex, setCurrentIndex] = useState(0);
-
+ const email=useSelector((state)=>state.email.email)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev === texts.length - 1 ? 0 : prev + 1));
@@ -56,6 +57,11 @@ const [currentIndex, setCurrentIndex] = useState(0);
      }     
      const handlOBuy=(e)=>{
     e.preventDefault();
+    if (!email) {
+     navigate("/login");
+     toast.success("If you want ot buy Course , Please login to continue..");
+     return;
+      }
     window.open("https://pages.razorpay.com/pl_RIVypWEQgPYGDw/view", "_blank", "noopener,noreferrer");
    
      }
@@ -63,12 +69,22 @@ const [currentIndex, setCurrentIndex] = useState(0);
      //Arduino 
    const handalABuy=(e)=>{
   e.preventDefault();
+    if (!email) { 
+        navigate("/login");
+        toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+    }
   window.open("https://pages.razorpay.com/pl_RIuyYDY4CVwUQ4/view", "_blank", "noopener,noreferrer");
       }
 
 //CCC 
      const handalCBuy=(e)=>{
   e.preventDefault();
+   if (!email) { 
+        navigate("/login");
+        toast.success("If you want ot buy Course , Please login to continue..");
+      return;
+    }
   window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
       }
      
@@ -87,7 +103,16 @@ const [currentIndex, setCurrentIndex] = useState(0);
      window.open("https://meet.google.com/dto-evxp-oft", "_blank", "noopener,noreferrer");
 
      }
-
+ const hanalIndresh=(e)=>{
+  e.preventDefault();
+   navigate("/indresh");
+   window.scrollTo(0, 0);
+ }
+ const hanalSant=(e)=>{ 
+  e.preventDefault();
+   navigate("/sant");
+   window.scrollTo(0, 0);
+ }
 
 
   return (
@@ -325,11 +350,12 @@ const [currentIndex, setCurrentIndex] = useState(0);
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
     
     {/* Admin Teacher */}
-    <div className="bg-violet-400 rounded-xl shadow-lg p-6 text-center border-2 border-violet-600">
+    <div className="bg-violet-400 rounded-xl cursor-pointer shadow-lg p-6 text-center border-2 border-violet-600">
       <img
          src={ceo}
         alt="Admin CEO"
         className="w-28 h-28 mx-auto rounded-full mb-4 object-cover"
+        onClick={hanalIndresh}
       />
       <h3 className="text-xl font-semibold text-blue-700">Mr. Indresh Kumar(Rahul)</h3>
       <p className="text-sm text-gray-600"> Founder & CEO </p>
@@ -366,6 +392,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
          src={sant}
         alt="Teacher"
         className="w-24 h-24 mx-auto rounded-full mb-5 object-cover "
+        onClick={hanalSant}
       />
       <h3 className="text-lg font-semibold">Aravind Sant Singh</h3>
       <span className="text-[3xl] text-gray-900  ">
