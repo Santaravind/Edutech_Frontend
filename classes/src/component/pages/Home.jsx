@@ -34,7 +34,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
  const handleBook = (e) => {
   e.preventDefault(); 
-  window.open("https://www.happydigitalbharat.com/", "_blank");
+  window.open("https://happydigitalbharatcom.blogspot.com/", "_blank");
      };
 
      const handleCourse=(e)=>{
