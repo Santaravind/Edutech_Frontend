@@ -344,7 +344,7 @@ const handalCDoute=(e)=>{
     </button>
 
     <button
-      onClick={handalOBuy}
+      onClick={handalCDoute}
       className="bg-blue-900 text-white hover:bg-yellow-300 hover:text-black px-5 py-2 rounded-lg transition"
     >
       Buy Now
