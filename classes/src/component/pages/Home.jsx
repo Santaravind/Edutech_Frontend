@@ -113,6 +113,13 @@ const [currentIndex, setCurrentIndex] = useState(0);
    navigate("/sant");
    window.scrollTo(0, 0);
  }
+ const handlDoute=(e)=>{
+    e.preventDefault();
+    navigate("/doute")
+    // console.log("click handal ")
+    window.scroll(0,0);
+
+ }
 
 
   return (
@@ -170,11 +177,17 @@ const [currentIndex, setCurrentIndex] = useState(0);
       {/* Why Choose Section */}
      <section className="py-12 px-4 md:px-16 text-center bg-gray-900 text-white mt-0.5 mb-0.5">
   <h2 className="text-2xl font-bold mb-8 ">Why Choose Our Live Classes?</h2>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-    <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white text-3xl">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6"
+    
+  >
+    {/* doute classe added */}
+    <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white text-3xl cursor-pointer" 
+      onClick={handlDoute}
+      >
       <div className="text-yellow-400 text-6xl mb-2">🧠</div>
       <p className="font-medium ">Real-time Doubt Solving</p>
     </div>
+
      <div className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 p-6 rounded-lg shadow-sm text-white text-3xl">
       <div className="text-blue-600 text-6xl mb-2">👨‍🏫</div>
       <p className="font-medium">Expert Teachers</p>
