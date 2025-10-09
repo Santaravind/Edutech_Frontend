@@ -27,6 +27,7 @@ import CCourse from "./component/pages/CCourse.jsx"
 import AboutUs from "./component/aboutPages/AboutUs.jsx"
 import Indresh from "./component/aboutPages/Indresh.jsx"
 import Aravind from "./component/aboutPages/Aravind.jsx"
+import DoutCourse from "./component/pages/DoutCourse.jsx"
 
 
 
@@ -105,10 +106,12 @@ function App() {
       }/>
 
       <Route path="/ccourse" element={
-       
-         <CCourse/> 
-        
-         
+         <CCourse/>         
+          
+      }/>
+      {/* doute class  */}
+       <Route path="/doute" element={
+         <DoutCourse/>         
           
       }/>
       <Route path="/buy" element={<Buy/>}/>
