@@ -11,7 +11,7 @@ const Aravind = () => {
       <div className="max-w-6xl mx-auto">
         {/* {/* Header */}
         <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
-          Developer
+           Technical Head
         </h2> 
 
         {/* Main Card */}
@@ -21,19 +21,19 @@ const Aravind = () => {
             <img
               src={profileImg}
               alt="Aravind Sant Singh"
-              className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-blue-500 shadow-xl"
+              className="w-50 h-50 md:w-58 md:h-58 rounded-full object-cover border-4 border-blue-500 shadow-xl"
             />
           </div>
 
           {/* Right - Details */}
-          <div className="flex-1 space-y-6">
+          <div className="flex-1 space-y-6 mt-6">
             {/* Personal Info */}
             <div className="bg-gray-50 rounded-xl p-4 shadow-inner">
-              <h3 className="text-xl font-semibold mb-2">👤 Personal Information</h3>
+              <h3 className="text-xl font-semibold mb-2">👤 Aravind Sant Singh</h3>
               <ul className="space-y-1 text-gray-700">
                 <li><b>Name:</b> Aravind Sant Singh</li>
                 <li><b>Email:</b> aravindsant563@gmail.com</li>
-                <li><b>Location:</b> Madhupur, Robertsganj, Sonbhadra, UP – 231216</li>
+                {/* <li><b>Location:</b> Madhupur, Robertsganj, Sonbhadra, UP – 231216</li> */}
                 <li><b>LinkedIn:</b> <a href="https://linkedin.com/in/aravind-sant-singh-717023229" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">linkedin.com/in/aravind-sant-singh</a></li>
                </ul>
             </div>
