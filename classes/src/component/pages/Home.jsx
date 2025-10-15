@@ -404,12 +404,12 @@ const [currentIndex, setCurrentIndex] = useState(0);
       <img
          src={sant}
         alt="Teacher"
-        className="w-24 h-24 mx-auto rounded-full mb-5 object-cover "
+        className="w-30 h-24 mx-auto rounded-full mb-5 object-cover shadow-sm ring-neutral-300 "
         onClick={hanalSant}
       />
       <h3 className="text-lg font-semibold">Aravind Sant Singh</h3>
       <span className="text-[3xl] text-gray-900  ">
-        Software Developer
+        Technical Head 
       </span>
     </div>
   </div>
