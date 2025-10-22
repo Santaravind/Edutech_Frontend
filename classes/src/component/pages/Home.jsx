@@ -8,6 +8,7 @@ import sant from '../assets/Sant.png'
 import acmc from '../assets/class1.jpg'
 import o from '../assets/Olevel.jpg'
 import ccc from '../assets/CCC.png'
+import harsit from '../assets/HarsitSir.jpg'
 import { toast } from 'react-toastify';
 import Rating from './Rating';
 import { useSelector } from 'react-redux';
@@ -118,6 +119,21 @@ const [currentIndex, setCurrentIndex] = useState(0);
     navigate("/doute")
     // console.log("click handal ")
     window.scroll(0,0);
+
+ }
+
+ //Forensic Science
+ const   handlFView=(e)=>{
+  e.preventDefault();
+  navigate("/framedetails"),
+  window.scroll(0,0);
+
+ }
+
+ const handIFrame=(e)=>{
+  e.preventDefault();
+  navigate("/Iframe")
+   window.scroll(0,0);
 
  }
 
@@ -260,6 +276,51 @@ const [currentIndex, setCurrentIndex] = useState(0);
       </div>
     </div>
 
+
+    {/* Harshit singh  */}
+       <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+      {/* Image */}
+      <img
+       
+        src={harsit}
+        alt="Forensic Science"
+        className="w-full h-58  object-cover"
+      />
+
+      {/* Content */}
+      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
+        <div>
+          <h1 className="text-xl font-bold mb-1">Forensic Science</h1>
+          <h3 className="text-md mb-2 font-semibold">Forensic Science (Crime Scene Do Not Cross)
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> 100% FREE</p>
+          <p className="text-sm flex "><h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>01/November/2025</p>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3 mt-6">
+          <button onClick={handIFrame}
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            100% Free Join Click
+          </button>
+
+          <button
+           onClick={handlFView}
+            type="button"
+            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+
     {/* { Second image} */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}
@@ -303,7 +364,6 @@ const [currentIndex, setCurrentIndex] = useState(0);
         </div>
       </div>
     </div>
-
     {/* { Third image} */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       {/* Image */}

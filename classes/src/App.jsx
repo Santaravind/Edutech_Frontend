@@ -28,8 +28,9 @@ import AboutUs from "./component/aboutPages/AboutUs.jsx"
 import Indresh from "./component/aboutPages/Indresh.jsx"
 import Aravind from "./component/aboutPages/Aravind.jsx"
 import DoutCourse from "./component/pages/DoutCourse.jsx"
-
-
+import ForensicIFrame from "./component/pages/forensicPage/ForensicIFrame.jsx"
+import ForensicDetails from "./component/pages/forensicPage/ForensicDetails.jsx"
+import DoutClass from "./component/pages/forensicPage/DoutClass.jsx"
 
 
 function App() {
@@ -100,10 +101,20 @@ function App() {
       }/>
 
       <Route path="/olevel" element={
-       
          <Olevel/>   
-              
-      }/>
+              }/>
+
+                 {/* Forensic Science  */}
+              <Route path="/Iframe" element={
+                  <ProtectetRoute>
+                <ForensicIFrame/>
+                </ProtectetRoute>
+              }/>
+
+              {/* Forensic Details  */}
+              <Route path="/framedetails" element={<ForensicDetails/>} />
+              {/* Forensic Doubt  */}
+              <Route path="/frameDoubt" element={<DoutClass/>} />
 
       <Route path="/ccourse" element={
          <CCourse/>         
@@ -121,6 +132,7 @@ function App() {
 
      <Route path="/login" element={<Login/>}/>
         
+
 
       <Route path="/logout" element={
       <ProtectetRoute>
