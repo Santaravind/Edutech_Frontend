@@ -3,15 +3,15 @@ import harsit from '../../assets/HarsitSir.jpg'
 function ForensicDetails() {
   // const courseInfo = {
   //   title: "Forensic Science, Semester I",
-  //   // subtitle: "Paper I — Introduction to Forensic Science (Theory)",
-  //   // code: "DSC 1",
-  //   // credits: 4,
-  //   // maxMarks: 100,
-  //   // minPassing: 40,
-  //   // lectures: 60,
-  //   // program: "Certificate",
-  //   // year: "First",
-  //   // semester: "First"
+  //   subtitle: "Paper I — Introduction to Forensic Science (Theory)",
+  //   code: "DSC 1",
+  //   credits: 4,
+  //   maxMarks: 100,
+  //   minPassing: 40,
+  //   lectures: 60,
+  //   program: "Certificate",
+  //   year: "First",
+  //   semester: "First"
   // };
 
   const units = [

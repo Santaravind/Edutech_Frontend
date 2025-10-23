@@ -108,7 +108,7 @@ function App() {
               <Route path="/Iframe" element={
                   <ProtectetRoute>
                   <ForensicIFrame/>
-                  </ProtectetRoute>
+                   </ProtectetRoute>
                 
                 
               }/>
@@ -116,7 +116,12 @@ function App() {
               {/* Forensic Details  */}
               <Route path="/framedetails" element={<ForensicDetails/>} />
               {/* Forensic Doubt  */}
-              <Route path="/frameDoubt" element={<DoutClass/>} />
+
+              <Route path="/frameDoubt" element={
+                 <ProtectetRoute> 
+                  <DoutClass/>
+                 </ProtectetRoute>          
+              } />
 
       <Route path="/ccourse" element={
          <CCourse/>         

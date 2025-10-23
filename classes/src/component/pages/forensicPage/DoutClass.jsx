@@ -70,10 +70,10 @@ const DoutClass = () => {
           <div className="mb-6">
             <h3 className="text-xl font-semibold mb-2">📲 How to Join</h3>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>⿡ Visit 👉 <a href="https://www.happydigitalbharat.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.happydigitalbharat.com</a></li>
-              <li>⿢ Click on <span className="font-semibold">"Forensic Science Doubt Class - Join Now"</span></li>
-              <li>⿣ Fill your details & pay ₹99/-</li>
-              <li>⿤ Get your Access Link on WhatsApp</li>
+              <li> Visit 👉 <a href="https://www.happydigitalbharat.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.happydigitalbharat.com</a></li>
+              <li> Click on <span className="font-semibold">"Forensic Science Doubt Class - Join Now"</span></li>
+              <li> Fill your details & pay ₹99/-</li>
+              <li> Get your Access Link on WhatsApp</li>
             </ul>
           </div>
 

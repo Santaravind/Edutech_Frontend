@@ -9,6 +9,7 @@ import acmc from '../assets/class1.jpg'
 import o from '../assets/Olevel.jpg'
 import ccc from '../assets/CCC.png'
 import harsit from '../assets/HarsitSir.jpg'
+import harsitphoto from '../assets/harsitphoto.jpg'
 import { toast } from 'react-toastify';
 import Rating from './Rating';
 import { useSelector } from 'react-redux';
@@ -230,7 +231,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 <section className="bg-gray-900 py-5 px-3 md:px-16 mt-0.5 mb-0.5">
   <h1 className="text-4xl font-sans font-bold text-center mb-7 text-white ">Our Courses</h1>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 justify-center">
     {/* Course Card */}
     {/* { First image} */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
@@ -291,7 +292,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
       <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
         <div>
           <h1 className="text-xl font-bold mb-1">Forensic Science</h1>
-          <h3 className="text-md mb-2 font-semibold">Forensic Science (Crime Scene Do Not Cross)
+          <h3 className="text-md mb-2 font-semibold">Forensic Science (For B.Sc. First Semester)
           </h3>
           <p className="text-sm mb-1 font-bold text-yellow-500 "> 100% FREE</p>
           <p className="text-sm flex "><h3 className='mr-1
@@ -420,7 +421,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
     <section className="bg-gray-800 py-12 px-4 md:px-16 mt-0.5 mb-0.5">
   <h2 className="text-3xl font-bold text-center mb-10 text-white font-sans ">Our Teachers</h2>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
     
     {/* Admin Teacher */}
     <div className="bg-violet-400 rounded-xl cursor-pointer shadow-lg p-6 text-center border-2 border-violet-600">
@@ -459,8 +460,51 @@ const [currentIndex, setCurrentIndex] = useState(0);
       <p className="text-sm text-black">Co Founder & Teacher</p>
     </div>
 
+
+      {/* Teacher Harshit Rana  */}
+  <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl hover:bg-violet-400  transition-all duration-300 border border-gray-100">
+  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+    <div className="w-full h-full rounded-full bg-white p-1">
+      <img
+        src={harsitphoto} // Replace with actual image path
+        alt="Harshit Rana"
+        className="w-full h-full rounded-full object-cover"
+      />
+    </div>
+  </div>
+  
+  <h3 className="text-xl font-bold text-gray-800 mb-2">Harshit Rana</h3>
+  <p className="text-lg text-blue-600 font-medium mb-4">Educator</p>
+  
+  <div className="bg-gray-50 rounded-lg p-4 text-left hover:bg-violet-400 hover:text-white">
+    <h4 className="font-semibold text-gray-700 mb-3 text-sm uppercase tracking-wide hover:text-white">Credentials:</h4>
+    <ul className="space-y-2 text-sm text-gray-600 hover:text-white"  >
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>5+ years teaching experience</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>Ex-Unacademy Meerut Centre Learner</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>Ex-Inspiring Agricon Faculty</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>2 Times NEET Qualified</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>Tutored & Mentored 500+ students</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
       {/* Teacher3 */}
-    <div className="bg-white rounded-xl shadow-md p-6 text-center cursor-pointer">
+    {/* <div className="bg-white rounded-xl shadow-md p-6 text-center cursor-pointer">
       <img
          src={sant}
         alt="Teacher"
@@ -471,7 +515,48 @@ const [currentIndex, setCurrentIndex] = useState(0);
       <span className="text-[3xl] text-gray-900  ">
         Technical Head 
       </span>
+    </div> */}
+    <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+    <div className="w-full h-full rounded-full bg-white p-1">
+      <img
+        src={sant} // Replace with actual image path
+        alt="sant"
+        className="w-full h-full rounded-full object-cover"
+        onClick={hanalSant}
+      />
     </div>
+  </div>
+  
+  <h3 className="text-xl font-bold text-gray-800 mb-2">Aravind Sant Singh</h3>
+  <p className="text-lg text-blue-600 font-medium mb-4">Technical Head </p>
+  
+  {/* <div className="bg-gray-50 rounded-lg p-4 text-left">
+    <h4 className="font-semibold text-gray-700 mb-3 text-sm uppercase tracking-wide">Credentials:</h4>
+    <ul className="space-y-2 text-sm text-gray-600">
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>5+ years teaching experience</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>Ex-Unacademy Meerut Centre Learner</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>Ex-Inspiring Agricon Faculty</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>2 Times NEET Qualified</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">•</span>
+        <span>Tutored & Mentored 500+ students</span>
+      </li>
+    </ul>
+  </div> */}
+</div>
   </div>
 </section>
 
