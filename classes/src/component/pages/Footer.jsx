@@ -171,7 +171,7 @@ const Footer = () => {
                 { label: "Terms & Conditions", href: "/terms-conditions" },
                 { label: "About the Founder", href: "/indresh" },
                 { label: "Organization Structure", href: "/org-structure" },
-                { label: "Innovative Ideas E-Books", href: "/ebooks" },
+                { label: "Innovative Ideas E-Books", href: "https://happydigitalbharatcom.blogspot.com/" },
               ].map((link, index) => (
                 <li key={index}>
                   <a
