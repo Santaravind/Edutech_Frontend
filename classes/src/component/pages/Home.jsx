@@ -10,6 +10,7 @@ import o from '../assets/Olevel.jpg'
 import ccc from '../assets/CCC.png'
 import harsit from '../assets/HarsitSir.jpg'
 import harsitphoto from '../assets/harsitphoto.jpg'
+import logo from '../assets/withg20.png'
 import { toast } from 'react-toastify';
 import Rating from './Rating';
 import { useSelector } from 'react-redux';
@@ -24,7 +25,7 @@ function Home() {
   { icon: <FaQuestionCircle />, text: 'Get Doubts Solved in Real-Time' },
 ];
 
- 
+  const [isModalOpen, setIsModalOpen] = useState(false);
 const [currentIndex, setCurrentIndex] = useState(0);
  const email=useSelector((state)=>state.email.email)
   useEffect(() => {
@@ -425,83 +426,121 @@ const [currentIndex, setCurrentIndex] = useState(0);
     
     {/* Admin Teacher */}
     <div className="bg-violet-400 rounded-xl cursor-pointer shadow-lg p-6 text-center border-2 border-violet-600">
+     <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+        <div className="w-full h-full rounded-full bg-white p-1">
       <img
          src={ceo}
         alt="Admin CEO"
-        className="w-28 h-28 mx-auto rounded-full mb-4 object-cover"
+        className="w-full h-full mx-auto rounded-full mb-4 object-cover"
         onClick={hanalIndresh}
       />
+      </div>
+      </div>
       <h3 className="text-xl font-semibold text-blue-700">Mr. Indresh Kumar(Rahul)</h3>
       <p className="text-sm text-gray-600"> Founder & CEO </p>
-      <span className="mt-2 inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full">Admin Teacher</span>
+      <span className="mt-2 inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full">Founder & CEO</span>
     </div>
 
     {/* Teacher 1 */}
-    <div className="bg-white rounded-xl shadow-md p-6 text-center hover:bg-violet-400">
+    <div className="bg-white rounded-xl shadow-md p-6 text-center hover:text-white hover:bg-violet-400">
+       <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+        <div className="w-full h-full rounded-full bg-white p-1">
       <img
         
         src={diologY}
         alt="Teacher"
-        className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
+        className="w-full h-full mx-auto rounded-full  object-cover"
       />
-      <h3 className="text-lg font-semibold">Mr. Mohit </h3>
-      <p className="text-sm text-gray-600">Co Founder & Biology Teacher</p>
+      </div>
+      </div> 
+      <h3 className="text-lg font-semibold">Dr. Mohit </h3>
+      <p className="text-sm ">Co Founder & Biology Teacher</p>
     </div>
 
     {/* Teacher 2 */}
-    <div className="bg-white rounded-xl shadow-md p-6 text-center  hover:bg-violet-400">
+    <div className="bg-white rounded-xl shadow-md p-6 text-center hover:text-white  hover:bg-violet-400">
+      <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+        <div className="w-full h-full rounded-full bg-white p-1">
       <img
      
         src={rites}
         alt="Teacher"
-        className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
+        className="w-full h-full mx-auto rounded-full mb-4 object-cover"
       />
+      </div>
+      </div>
       <h3 className="text-lg font-semibold">Mr.Ritesh Kumar</h3>
-      <p className="text-sm text-black">Co Founder & Teacher</p>
+      <p className="text-sm ">Co Founder & Teacher</p>
     </div>
 
 
       {/* Teacher Harshit Rana  */}
-  <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl hover:bg-violet-400  transition-all duration-300 border border-gray-100">
-  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+  
+ <div 
+        className="  bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl hover:bg-violet-400 transition-all duration-300 border border-gray-100 cursor-pointer"
+        onClick={() => setIsModalOpen(true)}
+      >
+        <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
     <div className="w-full h-full rounded-full bg-white p-1">
       <img
-        src={harsitphoto} // Replace with actual image path
+        src={harsitphoto} 
         alt="Harshit Rana"
         className="w-full h-full rounded-full object-cover"
       />
     </div>
   </div>
-  
-  <h3 className="text-xl font-bold text-gray-800 mb-2">Harshit Rana</h3>
-  <p className="text-lg text-blue-600 font-medium mb-4">Educator</p>
-  
-  <div className="bg-gray-50 rounded-lg p-4 text-left hover:bg-violet-400 hover:text-white">
-    <h4 className="font-semibold text-gray-700 mb-3 text-sm uppercase tracking-wide hover:text-white">Credentials:</h4>
-    <ul className="space-y-2 text-sm text-gray-600 hover:text-white"  >
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>5+ years teaching experience</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>Ex-Unacademy Meerut Centre Learner</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>Ex-Inspiring Agricon Faculty</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>2 Times NEET Qualified</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>Tutored & Mentored 500+ students</span>
-      </li>
-    </ul>
-  </div>
-</div>
+        <div className="mt-3">
+          <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
+            Educator
+          </span>
+        </div>
+      </div>
+
+      {/* Simple Modal */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div 
+            className="bg-white rounded-xl shadow-2xl max-w-sm w-full p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">Harshit Rana</h3>
+            <p className="text-blue-600 font-medium mb-6">Educator</p>
+            
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-700">
+                <span className="text-green-500 mr-3">•</span>
+                <span>5+ years teaching experience</span>
+              </div>
+              <div className="flex items-center text-gray-700">
+                <span className="text-green-500 mr-3">•</span>
+                <span>Ex-Unacademy Meerut Centre Learner</span>
+              </div>
+              <div className="flex items-center text-gray-700">
+                <span className="text-green-500 mr-3">•</span>
+                <span>Ex-Inspiring Agricon Faculty</span>
+              </div>
+              <div className="flex items-center text-gray-700">
+                <span className="text-green-500 mr-3">•</span>
+                <span>2 Times NEET Qualified</span>
+              </div>
+              <div className="flex items-center text-gray-700">
+                <span className="text-green-500 mr-3">•</span>
+                <span>Tutored & Mentored 500+ students</span>
+              </div>
+            </div>
+            
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="w-full mt-6 py-2 bg-violet-500 text-white rounded-lg hover:bg-violet-600 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Teacher3 */}
     {/* <div className="bg-white rounded-xl shadow-md p-6 text-center cursor-pointer">
@@ -520,7 +559,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
   <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
     <div className="w-full h-full rounded-full bg-white p-1">
       <img
-        src={sant} // Replace with actual image path
+        src={sant} 
         alt="sant"
         className="w-full h-full rounded-full object-cover"
         onClick={hanalSant}
@@ -531,33 +570,30 @@ const [currentIndex, setCurrentIndex] = useState(0);
   <h3 className="text-xl font-bold text-gray-800 mb-2">Aravind Sant Singh</h3>
   <p className="text-lg text-blue-600 font-medium mb-4">Technical Head </p>
   
-  {/* <div className="bg-gray-50 rounded-lg p-4 text-left">
-    <h4 className="font-semibold text-gray-700 mb-3 text-sm uppercase tracking-wide">Credentials:</h4>
-    <ul className="space-y-2 text-sm text-gray-600">
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>5+ years teaching experience</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>Ex-Unacademy Meerut Centre Learner</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>Ex-Inspiring Agricon Faculty</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>2 Times NEET Qualified</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-500 mr-2">•</span>
-        <span>Tutored & Mentored 500+ students</span>
-      </li>
-    </ul>
-  </div> */}
 </div>
+
+
+{/* Teacher 4 */}
+{/* <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+    <div className="w-full h-full rounded-full bg-white p-1">
+      <img
+        src={logo} 
+        alt="sant"
+        className="w-24 h-24  object-cover"
+        
+      />
+    </div>
   </div>
+  
+  <h3 className="text-xl font-bold text-gray-800 mb-2">Aravind Sant Singh</h3>
+  <p className="text-lg text-blue-600 font-medium mb-4">Technical Head </p>
+  
+</div> */}
+  </div>
+
+  
+  
 </section>
 
 

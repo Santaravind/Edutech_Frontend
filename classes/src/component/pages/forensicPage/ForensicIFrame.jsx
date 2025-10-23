@@ -12,7 +12,7 @@ function ForensicIFrame() {
   };
 
   const handalNotes=()=>{
-    toast.success("Commint very soon !!!")
+    toast.success("Coming soon !!!")
   }
   const videos = [
     {
@@ -103,7 +103,7 @@ function ForensicIFrame() {
                     className="text-center text-1xl font-bold p-2 text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-white/20 cursor-pointer "
                     onClick={handalDoubt}
                   >
-                    Doubt Class
+                   Doubt box 
                   </h1>
                 </div>
                 <div className="mr-4">

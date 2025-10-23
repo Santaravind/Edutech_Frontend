@@ -31,6 +31,7 @@ import DoutCourse from "./component/pages/DoutCourse.jsx"
 import ForensicIFrame from "./component/pages/forensicPage/ForensicIFrame.jsx"
 import ForensicDetails from "./component/pages/forensicPage/ForensicDetails.jsx"
 import DoutClass from "./component/pages/forensicPage/DoutClass.jsx"
+import AboutUsFooter from "./component/aboutPages/AboutUsFooter.jsx"
 
 
 function App() {
@@ -127,11 +128,14 @@ function App() {
          <CCourse/>         
           
       }/>
+
       {/* doute class  */}
        <Route path="/doute" element={
-         <DoutCourse/>         
-          
+         <DoutCourse/>           
       }/>
+
+      <Route path="/footeraboutus" element={<AboutUsFooter/>}/>
+
       <Route path="/buy" element={<Buy/>}/>
      <Route path="/signin" element={<Signin/>}/>
      

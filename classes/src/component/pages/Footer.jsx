@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import logo from "../assets/withg20.png";
+import { Navigate, useNavigate } from "react-router-dom";
 const Footer = () => {
   const [playVideo, setPlayVideo] = useState(false);
+  const  navigate=useNavigate();
+
+  const handleFooterAbutus=(e)=>{
+      e.preventDefault();
+        navigate("/footeraboutus")
+      window.scrollTo(0, 0);
+  }
+
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -160,7 +169,7 @@ const Footer = () => {
                 { label: "Privacy Policy", href: "/privacy-policy" },
                 { label: "Contact Us", href: "/contact-us" },
                 { label: "Terms & Conditions", href: "/terms-conditions" },
-                { label: "About the Founder", href: "/founder" },
+                { label: "About the Founder", href: "/indresh" },
                 { label: "Organization Structure", href: "/org-structure" },
                 { label: "Innovative Ideas E-Books", href: "/ebooks" },
               ].map((link, index) => (

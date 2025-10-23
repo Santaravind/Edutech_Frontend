@@ -15,7 +15,7 @@ const DoutClass = () => {
           toast.success("If you want to buy Course, Please login to continue..");
           return;
         }
-        window.open("https://pages.razorpay.com/pl_RR4RFAufqyCYHB/view", "_blank", "noopener,noreferrer");
+        window.open("https://pages.razorpay.com/pl_RWydOO3UI0pY70/view", "_blank", "noopener,noreferrer");
     }
 
   return (
