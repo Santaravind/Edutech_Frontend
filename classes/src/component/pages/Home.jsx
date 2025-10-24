@@ -490,6 +490,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
     </div>
   </div>
         <div className="mt-3">
+          <h3 className="text-2xl font-bold text-gray-800 mb-2">Harshit Rana</h3>
           <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
             Educator
           </span>

@@ -77,7 +77,7 @@ const handalCDoute=(e)=>{
     navigate("/doute")
    }
   return (
-    <div className='min-h-screen bg-gray-900 p-2'>
+    <div className='min-h-screen bg-gradient-to-r from-purple-300 via-neutral-300 to-gray-400 p-2'>
       <div className='container m-auto p-2'>
         <h2 className='text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-8 text-white'>
           Our Courses
