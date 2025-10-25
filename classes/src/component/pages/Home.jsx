@@ -436,7 +436,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
       />
       </div>
       </div>
-      <h3 className="text-xl font-semibold text-blue-700">Mr. Indresh Kumar(Rahul)</h3>
+      <h3 className="text-xl font-semibold text-blue-700">Indresh Kumar(Rahul)</h3>
       <p className="text-sm text-gray-600"> Founder & CEO </p>
       <span className="mt-2 inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full">Founder & CEO</span>
     </div>
@@ -469,7 +469,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
       />
       </div>
       </div>
-      <h3 className="text-lg font-semibold">Mr.Ritesh Kumar</h3>
+      <h3 className="text-lg font-semibold">Ritesh Kumar</h3>
       <p className="text-sm ">Co Founder & Teacher</p>
     </div>
 
