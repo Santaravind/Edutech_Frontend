@@ -170,7 +170,7 @@ const Footer = () => {
                 { label: "Contact Us", href: "/contact-us" },
                 { label: "Terms & Conditions", href: "/terms-conditions" },
                 { label: "About the Founder", href: "/indresh" },
-                { label: "Organization Structure", href: "/org-structure" },
+                { label: "Organization Structure", href: "https://techniacal-site.vercel.app/" },
                 { label: "Innovative Ideas E-Books", href: "https://happydigitalbharatcom.blogspot.com/" },
               ].map((link, index) => (
                 <li key={index}>
