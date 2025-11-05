@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import logo from "../assets/withg20.png";
-import { Navigate, useNavigate } from "react-router-dom";
-const Footer = () => {
+import { Link, Navigate, useNavigate } from "react-router-dom";
+const Footert= () => {
   const [playVideo, setPlayVideo] = useState(false);
-  const navigate = useNavigate();
+  const  navigate=useNavigate();
 
-  const handleFooterAbutus = (e) => {
-    e.preventDefault();
-    navigate("/footeraboutus");
-    window.scrollTo(0, 0);
-  };
+//   const handleFooterAbutus=(e)=>{
+//       e.preventDefault();
+//         navigate("/footeraboutus")
+//       window.scrollTo(0, 0);
+//   }
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-800 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 - About/Logo Section */}
@@ -163,50 +163,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-blue-400">
               Company
             </h3>
-            {/* <ul className="space-y-3">
+            <ul className="space-y-3">
               {[
-                { label: "About", href: "/" },
-                { label: "Privacy Policy", href: "/" },
-                { label: "Contact Us", href: "/" },
-                { label: "Terms & Conditions", href: "/" },
-                { label: "About the Founder", href: "/indresh" },
-                { label: "Organization Technical Site", href: "/techsite" },
+                { label: "About", href: "/techsite" },
+                { label: "Privacy Policy", href: "/techsite" },
+                { label: "Contact Us", href: "/techsite" },
+                { label: "Terms & Conditions", href: "/techsite" },
+                { label: "About the Founder", href: "/techsite/Indresht" },
+                { label: "Organization Structure", href: "/techsite" },
                 { label: "Innovative Ideas E-Books", href: "https://happydigitalbharatcom.blogspot.com/" },
               ].map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 text-sm hover:underline"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul> */}
-
-            <ul className="space-y-3">
-              {[
-                { label: "About", href: "/" },
-                { label: "Privacy Policy", href: "/" },
-                { label: "Contact Us", href: "/" },
-                { label: "Terms & Conditions", href: "/" },
-                { label: "About the Founder", href: "/indresh" },
-                {
-                  label: "Organization Technical Site",
-                  href: "https://www.happydigitalbharat.com/techsite",
-                  newTab: true,
-                },
-                {
-                  label: "Innovative Ideas E-Books",
-                  href: "https://happydigitalbharatcom.blogspot.com/",
-                  newTab: true,
-                },
-              ].map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    target={link.newTab ? "_blank" : "_self"} // 🔹 Open new tab only if newTab: true
-                    rel={link.newTab ? "noopener noreferrer" : undefined} // 🔒 Security for new tab
                     className="text-gray-300 hover:text-white transition-colors duration-300 text-sm hover:underline"
                   >
                     {link.label}
@@ -229,12 +198,12 @@ const Footer = () => {
                   { label: "Documentation", href: "/documentation" },
                 ].map((link, index) => (
                   <li key={index}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-colors duration-300 text-sm hover:underline"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -415,4 +384,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footert;

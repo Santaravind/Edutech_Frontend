@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Router, Routes, useLocation } from "react-router-dom"
 import Header from "./component/pages/Header"
 import Home from "./component/pages/Home"
 import Course from "./component/pages/Course"
@@ -32,10 +32,15 @@ import ForensicIFrame from "./component/pages/forensicPage/ForensicIFrame.jsx"
 import ForensicDetails from "./component/pages/forensicPage/ForensicDetails.jsx"
 import DoutClass from "./component/pages/forensicPage/DoutClass.jsx"
 import AboutUsFooter from "./component/aboutPages/AboutUsFooter.jsx"
+import TechSite from "./component/techsite/TechSite.jsx"
+import Homet from "./component/techsite/Homet.jsx"
+import ServicesSection from "./component/techsite/ServiceSection.jsx"
+import Indresht from "./component/techsite/Indresht.jsx"
 
 
 function App() {
   const dispatch = useDispatch();
+   const location = useLocation(); // detect current route
 
   useEffect(() => {
     const token = localStorage.getItem("authToken");
@@ -43,6 +48,9 @@ function App() {
       dispatch(login(token)); // restore login
     }
   }, [dispatch]);
+
+   // Hide Header/Footer for /techsite routes
+  const hideLayout = location.pathname.startsWith("/techsite");
  return (
    <>
     <Toaster position="top-right" reverseOrder={false} />
@@ -66,7 +74,9 @@ function App() {
     },
   }}
      />
-     <Header/>
+     {/* <Header/> */}
+     {/* Show Header only when not on techsite */}
+      {!hideLayout && <Header />}
      <ScrollToTop/>
    <Routes>
     <Route path="/" element={<Home/>}/>
@@ -154,7 +164,17 @@ function App() {
       }/>
 
    </Routes>
-    <Footer/>
+   {!hideLayout &&<Footer/>}
+   {/* //TechSite route for header and outlet */}
+ <Routes>
+     <Route path="/techsite" element={<TechSite/>}>
+          <Route index element={<Homet/>}/>
+          <Route path="servicet" element={<ServicesSection/>}/>
+          <Route path="Indresht" element={<Indresht/>}/>
+       </Route>
+  </Routes>
+       
+    
    </>
   )
 }
