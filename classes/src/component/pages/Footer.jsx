@@ -193,7 +193,7 @@ const Footer = () => {
                 { label: "About the Founder", href: "/indresh" },
                 {
                   label: "Organization Technical Site",
-                  href: "https://www.happydigitalbharat.com/techsite",
+                  href: "https://www.happydigitalbharat.com/tech",
                   newTab: true,
                 },
                 {

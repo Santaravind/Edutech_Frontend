@@ -7,9 +7,9 @@ const Headert = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', link: '/techsite' },
-    { name: 'Service', link: '/techsite/servicet' },
-    // { name: 'About', link: '/techsite/about' },
+    { name: 'Home', link: '/tech' },
+    { name: 'Service', link: '/tech/servicet' },
+    // { name: 'About', link: '/tech/about' },
   ];
 
   // Detect scroll

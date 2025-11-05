@@ -50,7 +50,7 @@ function App() {
   }, [dispatch]);
 
    // Hide Header/Footer for /techsite routes
-  const hideLayout = location.pathname.startsWith("/techsite");
+  const hideLayout = location.pathname.startsWith("/tech");
  return (
    <>
     <Toaster position="top-right" reverseOrder={false} />
@@ -167,7 +167,7 @@ function App() {
    {!hideLayout &&<Footer/>}
    {/* //TechSite route for header and outlet */}
  <Routes>
-     <Route path="/techsite" element={<TechSite/>}>
+     <Route path="/tech" element={<TechSite/>}>
           <Route index element={<Homet/>}/>
           <Route path="servicet" element={<ServicesSection/>}/>
           <Route path="Indresht" element={<Indresht/>}/>
