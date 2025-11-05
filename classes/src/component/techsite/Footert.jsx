@@ -165,12 +165,12 @@ const Footert= () => {
             </h3>
             <ul className="space-y-3">
               {[
-                { label: "About", href: "/techsite" },
-                { label: "Privacy Policy", href: "/techsite" },
-                { label: "Contact Us", href: "/techsite" },
-                { label: "Terms & Conditions", href: "/techsite" },
-                { label: "About the Founder", href: "/techsite/Indresht" },
-                { label: "Organization Structure", href: "/techsite" },
+                { label: "About", href: "/tech" },
+                { label: "Privacy Policy", href: "/tech" },
+                { label: "Contact Us", href: "/tech" },
+                { label: "Terms & Conditions", href: "/tech" },
+                { label: "About the Founder", href: "/tech/Indresht" },
+                { label: "Organization Structure", href: "/tech" },
                 { label: "Innovative Ideas E-Books", href: "https://happydigitalbharatcom.blogspot.com/" },
               ].map((link, index) => (
                 <li key={index}>

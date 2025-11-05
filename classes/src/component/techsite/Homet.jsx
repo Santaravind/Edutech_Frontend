@@ -35,12 +35,27 @@ const Homet = () => {
             {/* Main Heading */}
             <h1
               className="text-4xl md:text-7xl font-bold mb-6 leading-tight 
-               bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 
-                   bg-clip-text text-transparent"
+              text-white 
+                  "
             >
-              <span className="block">HAPPY DIGITAL BHARAT</span>
+           {/* <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-center">
+  <span className="block bg-gradient-to-r from-green-400 via-yellow-500 to-rose-500 bg-clip-text text-transparent  outline-neutral-200 shadow-none font-serif">
+    HAPPY DIGITAL BHARAT
+  </span>
+</h1> */}
 
-              <span className="block text-3xl mt-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+<h1 className="text-6xl md:text-7xl font-extrabold mb-6 leading-tight text-center">
+  <span className="block bg-gradient-to-r from-green-400 via-yellow-500 to-rose-500 
+    bg-clip-text text-transparent font-serif drop-shadow-[6px_6px_0px_rgba(0,0,0,0.4)]">
+    HAPPY DIGITAL BHARAT
+  </span>
+</h1>
+
+
+
+
+
+              <span className="block text-3xl mt-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 BUILD YOUR DREAM IN REAL
               </span>
             </h1>
