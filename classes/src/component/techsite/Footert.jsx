@@ -151,11 +151,38 @@ const Footert= () => {
               </div>
             </div>
 
-            {/* <div className="mt-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4">
-              <h4 className="text-sm font-medium mb-2">Total Orders (Last 28 Days)</h4>
-              <div className="text-2xl font-bold">24,677</div>
-              <div className="text-xs text-blue-100 mt-1">Products delivered successfully</div>
-            </div> */}
+            <div className="lg:col-span-1 mt-4">
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">
+              Our Other Company 
+            </h3>
+           
+            <ul className="space-y-3">
+              {[
+                { label: "EdTech", href: "https://www.happydigitalbharat.com/", newTab:true, },
+                { label: "Our Tech  ", href: "/tech" },
+                { label: "E- commerce", href: "https://happydigitalbharatcom.blogspot.com/", newTab: true,},
+                {
+                  label: "Organization & Foundation",
+                  href: "/tech"
+                },
+                 { label: "About the Founder", href: "/tech/Indresht" },
+                
+              ].map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    target={link.newTab ? "_blank" : "_self"} //  Open new tab only if newTab: true
+                    rel={link.newTab ? "noopener noreferrer" : undefined} // Security for new tab
+                    className="text-gray-300 hover:text-white transition-colors duration-300 text-sm hover:underline"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            
+          </div>
           </div>
 
           {/* Column 3 - Company Links */}
