@@ -29,10 +29,10 @@ function ForensicIFrame() {
     },
     {
       id: 3,
-      title: "lecture #3 comming soon !!!",
-      youtubeId: "tgbNymZ7vqY",
-      url: "",
-      //   url: "https://www.youtube.com/embed/tgbNymZ7vqY"
+      title: "lecture #3 ",
+      youtubeId: "fkp2ZtsecTo",
+      url: "https://www.youtube.com/embed/fkp2ZtsecTo",
+      
     },
   ];
 
