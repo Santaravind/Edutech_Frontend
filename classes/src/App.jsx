@@ -36,6 +36,7 @@ import TechSite from "./component/techsite/TechSite.jsx"
 import Homet from "./component/techsite/Homet.jsx"
 import ServicesSection from "./component/techsite/ServiceSection.jsx"
 import Indresht from "./component/techsite/Indresht.jsx"
+import Internshiprogram from "./component/pages/Internshiprogram.jsx"
 
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
     <Route path="/about" element={<AboutUs/>}/>
     <Route path="/indresh" element={<Indresh/>}/>
     <Route path="/sant" element={<Aravind/>}/>
+    <Route path="/internship" element={<Internshiprogram/>}/>
 
     <Route path="/notificationsend" element={
       <ProtectetRoute>

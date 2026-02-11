@@ -7,6 +7,7 @@ import rites from '../assets/ritesh.jpg'
 import sant from '../assets/Sant.png'
 import acmc from '../assets/class1.jpg'
 import o from '../assets/Olevel.jpg'
+import mca from '../assets/mca.jpeg'
 import ccc from '../assets/CCC.png'
 import harsit from '../assets/HarsitSir.jpg'
 import hrigvi from '../assets/Hrigvi.jpeg'
@@ -92,6 +93,18 @@ const [currentIndex, setCurrentIndex] = useState(0);
   window.open("https://pages.razorpay.com/pl_RIur6XLWzRsxQh/view", "_blank", "noopener,noreferrer");
       }
      
+      //mca 
+           const handalbuyMca=(e)=>{
+  e.preventDefault();
+  //  if (!email) { 
+  //       navigate("/login");
+  //       toast.success("If you want ot buy Course , Please login to continue..");
+  //     return;
+  //   }
+  window.open("https://pages.razorpay.com/pl_SDDSHqlINjyj96/view", "_blank", "noopener,noreferrer");
+      }
+
+
      const handlOView=(e)=>{
       e.preventDefault();
       navigate("/olevel");
@@ -129,6 +142,14 @@ const [currentIndex, setCurrentIndex] = useState(0);
  const   handlFView=(e)=>{
   e.preventDefault();
   navigate("/framedetails"),
+  window.scroll(0,0);
+
+ }
+
+    // internship 
+     const   handlMCA=(e)=>{
+  e.preventDefault();
+  navigate("/internship"),
   window.scroll(0,0);
 
  }
@@ -281,8 +302,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
 
     {/* Harshit singh  */}
-       <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
-      {/* Image */}
+       {/* <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+      
       <img
        
         src={harsit}
@@ -290,7 +311,6 @@ const [currentIndex, setCurrentIndex] = useState(0);
         className="w-full h-58  object-cover"
       />
 
-      {/* Content */}
       <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
         <div>
           <h1 className="text-xl font-bold mb-1">Forensic Science</h1>
@@ -301,7 +321,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
            text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3>01/November/2025</p>
         </div>
 
-        {/* Buttons */}
+        
         <div className="flex gap-3 mt-6">
           <button onClick={handIFrame}
             type="button"
@@ -322,7 +342,52 @@ const [currentIndex, setCurrentIndex] = useState(0);
           </button>
         </div>
       </div>
+    </div> */}
+   
+
+    {/* this new traning course  */}
+      <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+      
+      <img
+       
+        src={mca}
+        alt="Forensic Science"
+        className="w-full h-58  object-cover"
+      />
+
+      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
+        <div>
+          <h1 className="text-xl font-bold mb-1"> INTERNSHIP PROGRAM - BCA / MCA SPECIAL</h1>
+          <h3 className="text-md mb-2 font-semibold"> INTERNSHIP PROGRAM - BCA / MCA SPECIAL By Happy Digital Bharat
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 ">Fee: ₹779/- only </p>
+          <p className="text-sm flex ">Duration: 30 Days<h3 className='mr-1
+           text-red-600 font-semibold font-serif text-[18px]'> 📅 Start Date: </h3></p>
+        </div>
+
+        
+        <div className="flex gap-3 mt-6">
+          <button onClick={handalbuyMca}
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+             Join Click
+          </button>
+
+          <button
+           onClick={handlMCA}
+            type="button"
+            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
     </div>
+
 
     {/* { Second image} */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
