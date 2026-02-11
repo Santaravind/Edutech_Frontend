@@ -44,7 +44,7 @@ import { useSelector } from "react-redux";
 
         <p className="text-lg text-gray-700 mb-6">
           🎉 <span className="font-semibold">Special Offer</span> – Only{" "}
-          <span className="text-yellow-600 font-bold">₹799/only</span>
+          <span className="text-yellow-600 font-bold">₹779/only</span>
         </p>
 
 {/* Internship Program Details */}
@@ -180,7 +180,7 @@ import { useSelector } from "react-redux";
           <p className="text-lg font-bold text-gray-800">
             💰 Course Fee:{" "}
 
-            <span className="text-red-500 text-2xl">₹799/-</span> per month
+            <span className="text-red-500 text-2xl">₹779/-</span> per month
             (Approx. 8 months)
           </p>
           </button>
