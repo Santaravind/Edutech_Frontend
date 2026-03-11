@@ -81,7 +81,7 @@ function Header() {
                 </Link>
               </button>
               {/* Send notification  */}
-              {notifOpen && (email==='harshitranaofficial@gmail.com'||email==='aravindsant563@gmail.com'|| email==='happydigitalbharat@gmail.com'||email==='mspoojaconstruction02282@gmail.com')&&(
+              {notifOpen && (email==='harshitranaofficial@gmail.com'||email==='aravindsant563@gmail.com'|| email==='happydigitalbharat@gmail.com'||email==='mspoojaconstruction02282@gmail.com'||email==='hrigvi.singh25@gmail.com')&&(
                 <div className="absolute mt-2 bg-purple-400 text-black rounded-xl shadow-lg w-40">
                 
                   <Link
