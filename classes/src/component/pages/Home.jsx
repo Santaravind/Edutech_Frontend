@@ -16,7 +16,7 @@ import logo from '../assets/withg20.png'
 import { toast } from 'react-toastify';
 import Rating from './Rating';
 import { useSelector } from 'react-redux';
-
+import robotcs from '../assets/robotics.jpeg'
 
 function Home() {
   const navigate=useNavigate();
@@ -254,7 +254,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 <section className="bg-gray-900 py-5 px-3 md:px-16 mt-0.5 mb-0.5">
   <h1 className="text-4xl font-sans font-bold text-center mb-7 text-white ">Our Courses</h1>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 justify-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-center">
     {/* Course Card */}
     {/* { First image} */}
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
@@ -302,7 +302,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
 
     {/* Harshit singh  */}
-       {/* <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+        <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
       
       <img
        
@@ -342,7 +342,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
           </button>
         </div>
       </div>
-    </div> */}
+    </div> 
    
 
     {/* this new traning course  */}
@@ -476,6 +476,56 @@ const [currentIndex, setCurrentIndex] = useState(0);
       </div>
     </div>
     
+
+
+     {/* robotics classes  */}
+         <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col">
+      {/* Image */}
+      <img
+       
+        src={robotcs}
+        alt="robotics Course"
+        className="w-full h-58  object-cover"
+      />
+
+      {/* Content */}
+      <div className="bg-teal-600 text-white p-6 flex flex-col justify-between flex-grow">
+        <div>
+          <h1 className="text-xl font-bold mb-1">🤖 ROBOTICS CLASS 🤖</h1>
+          <h3 className="text-md mb-2 font-semibold">For Class 6 to 12 Students
+          </h3>
+          <p className="text-sm mb-1 font-bold text-yellow-500 "> ₹ 499.00</p>
+          <p className="text-sm flex ">Friday, February 13 · 8:15 – 9:15pm</p> 
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3 mt-6">
+          <button onClick={handalABuy}
+            type="button"
+            className="text-white animate-blink 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2 hover:bg-blue-800"
+          >
+            Buy Now
+          </button>
+
+          <button
+           onClick={handleaBuy}
+            type="button"
+            className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium 
+              rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+      
+    </div>
+
+
+
+
+
      <div className='justify-center items-center'>
         <h1 className='text-white font-sans text-3xl  text-center   justify-center items-center font-semibold '> <button className='border-2 p-2 rounded-x bg-purple-600 rounded-2xl' onClick={handleCourse}> More Courses </button>  </h1>
      </div>
