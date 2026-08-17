@@ -672,7 +672,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
         Technical Head 
       </span>
     </div> */}
-    <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
+    {/* <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
   <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
     <div className="w-full h-full rounded-full bg-white p-1">
       <img
@@ -687,7 +687,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
   <h3 className="text-xl font-bold text-gray-800 mb-2">Hrigvi Singh Banafar </h3>
   <p className="text-lg text-blue-600 font-medium mb-4">Academic Coordinator </p>
   
-</div>
+</div> */}
 
     <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-100">
   <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
